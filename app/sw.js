@@ -1,5 +1,5 @@
-/* Pausa v1.11.0 — version-safe shell, cached media library. */
-const CACHE = 'pausa-shell-v1.11.0';
+/* Pausa v1.12.0 — version-safe shell, cached media library. */
+const CACHE = 'pausa-shell-v1.12.0';
 const MEDIA_CACHE = 'pausa-library-v1.2';
 const SHELL = ['./','./index.html','./styles.css',
   './fullbody.js','./app.js','./core.js','./data.js','./agent-core.js','./agent-planner.js','./agent-ui.js',
@@ -54,5 +54,15 @@ self.addEventListener('fetch',event=>{
    }
    throw error;
   }
+ })());
+});
+
+self.addEventListener('notificationclick',event=>{
+ event.notification.close();
+ event.waitUntil((async()=>{
+  const windows=await self.clients.matchAll({type:'window',includeUncontrolled:true});
+  const target=windows.find(w=>new URL(w.url).origin===self.location.origin);
+  if(target){await target.focus();return;}
+  await self.clients.openWindow('./#inicio');
  })());
 });

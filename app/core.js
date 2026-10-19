@@ -3,13 +3,29 @@
  const VALID_INTERVALS=[25,30,45,60,90];
  const dateKey=(timestamp)=>{const d=new Date(timestamp);return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};
  const minutes=(seconds)=>Math.ceil(seconds/60);
+ const validClock=x=>typeof x==='string'&&/^([01]\d|2[0-3]):[0-5]\d$/.test(x);
+ const minutesOf=x=>{if(!validClock(x))return null;const [h,m]=x.split(':').map(Number);return h*60+m};
+ function nextAllowedReminder(time,r){
+  if(!r?.scheduleEnabled)return time;
+  const start=minutesOf(r.start),end=minutesOf(r.end);
+  if(start===null||end===null||start>=end)return time;
+  const d=new Date(time);if(Number.isNaN(d.getTime()))return time;
+  for(let i=0;i<8;i++){
+   const wd=d.getDay(),minute=d.getHours()*60+d.getMinutes(),weekday=!r.weekdaysOnly||(wd!==0&&wd!==6);
+   if(weekday&&minute>=start&&minute<end)return d.getTime();
+   if(weekday&&minute<start){d.setHours(Math.floor(start/60),start%60,0,0);return d.getTime();}
+   d.setDate(d.getDate()+1);d.setHours(0,0,0,0);
+  }
+  return time;
+ }
+
  const formatClock=(seconds)=>{const s=Math.max(0,Math.floor(Number(seconds)||0));return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`};
  const fromMinutes=(seconds)=>Math.round((Number(seconds)||0)/60);
  function validLog(log){return log&&typeof log==='object'&&typeof log.id==='string'&&typeof log.at==='number'&&Number.isFinite(log.at)&&log.at>0&&log.at<Date.now()+86400000&&typeof log.seconds==='number'&&Number.isFinite(log.seconds)&&log.seconds>=1&&log.seconds<=7200&&typeof log.name==='string'&&log.name.length<=100}
  function normalize(raw){const base={version:1,reminders:{enabled:false,interval:30,nextDueAt:0,pending:false},logs:[],safety:'unset',session:null};
   if(!raw||typeof raw!=='object')return base;
   const r=raw.reminders&&typeof raw.reminders==='object'?raw.reminders:{};
-  base.reminders={enabled:r.enabled===true,interval:VALID_INTERVALS.includes(Number(r.interval))?Number(r.interval):30,nextDueAt:Number.isFinite(r.nextDueAt)?r.nextDueAt:0,pending:r.pending===true};
+  base.reminders={enabled:r.enabled===true,interval:VALID_INTERVALS.includes(Number(r.interval))?Number(r.interval):30,nextDueAt:Number.isFinite(r.nextDueAt)&&r.nextDueAt>0?r.nextDueAt:0,pending:r.pending===true,scheduleEnabled:r.scheduleEnabled===true,start:validClock(r.start)?r.start:'09:00',end:validClock(r.end)?r.end:'18:00',weekdaysOnly:r.weekdaysOnly!==false};
   if(base.reminders.enabled&&!base.reminders.nextDueAt)base.reminders.nextDueAt=Date.now()+base.reminders.interval*60000;
   base.logs=Array.isArray(raw.logs)?raw.logs.filter(validLog).slice(-1000):[];
   base.safety=['unset','ok','caution','urgent'].includes(raw.safety)?raw.safety:'unset';
@@ -27,5 +43,5 @@
   const dates=[];const today=new Date(now);today.setHours(12,0,0,0);
   for(let i=6;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const key=dateKey(d.getTime());dates.push({key,minutes:sumMinutes(dayLogs(logs,key)),label:new Intl.DateTimeFormat('es',{weekday:'short'}).format(d).replace('.','')});}return dates;
  }
- return {VALID_INTERVALS,dateKey,minutes,formatClock,fromMinutes,normalize,dayLogs,sumMinutes,streak,week};
+ return {VALID_INTERVALS,dateKey,minutes,formatClock,fromMinutes,normalize,nextAllowedReminder,dayLogs,sumMinutes,streak,week};
 });

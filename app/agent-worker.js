@@ -1,5 +1,5 @@
 /* Local generation only. No description is sent to a remote inference API. */
-import './agent-planner.js?v=1.11.0';
+import './agent-planner.js?v=1.12.0';
 const P=globalThis.PausaPlanner;
 let pipePromise,busy=false;
 async function init(){

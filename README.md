@@ -53,3 +53,9 @@ La siguiente etapa debe validar uso real, memoria/latencia en teléfonos, instal
 ## Contribuir
 
 Lee [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md) y [SECURITY.md](SECURITY.md). Las comprobaciones se ejecutan localmente; esta importación no añade GitHub Actions. Código y medios locales conservan las licencias declaradas del proyecto; consulta [LICENSE](LICENSE) y [procedencia y dependencias](THIRD_PARTY_NOTICES.md).
+
+## MK2: preparación de lanzamiento 1.12.0
+
+La rama de desarrollo incluye una rutina inmediata de **Pausa sentado** (145 s; hombros, pelvis, tronco), sin descarga de IA, y ventanas de horario laboral opcionales para los recordatorios. La guía avanzada sigue utilizando un modelo descargable de aproximadamente 512 MB. Los avisos **no están garantizados con Pausa cerrada**.
+
+Consulta [MK2](mk2/README.md) y sus [gates de salida](mk2/plan/RELEASE-GATES.md). El sitio publicado continúa con v1.11.0 hasta un despliegue autorizado y verificado. **No hay cobros, suscripciones, Play Store ni validación clínica o comercial cerrados.**

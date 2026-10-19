@@ -77,3 +77,11 @@ body{background:var(--bg)}::selection{background:#d6e9a8;color:#173e30}button,a,
 
 /* 1.11: explicit scope for AI-selected length. */
 .guide-mode{border:0;padding:0;margin:4px 0 12px;display:grid;gap:10px}.guide-mode legend{font-weight:700;font-size:14px;color:#34564a;margin-bottom:12px}.agent-form .guide-mode label{display:flex;align-items:flex-start;gap:11px;background:#f8faf5;border:1px solid #dae3d1;border-radius:12px;padding:15px;cursor:pointer}.guide-mode label:has(input:checked){border-color:#627e46;background:#eef3e6}.guide-mode input{accent-color:#567642;margin:3px 0 0;flex:none}.guide-mode span{display:grid;gap:5px}.guide-mode b{font-size:13px;color:#304e2c}.guide-mode small{font-size:12px;color:#52644a;line-height:1.6}.selection-summary strong{color:#304e2c;font-weight:700;line-height:1.9}.agent-result-grid{grid-template-columns:repeat(min(var(--exercise-count,3),3),minmax(0,1fr))}@media(max-width:1100px) and (min-width:651px){.agent-result-grid{grid-template-columns:repeat(min(var(--exercise-count,2),2),minmax(0,1fr))}}@media(max-width:650px){.agent-result-grid{grid-template-columns:minmax(0,1fr)}.guide-mode b{font-size:13px}.guide-mode small{font-size:12px}}
+
+/* MK2 — agenda optativa y alternativa ligera de inicio. */
+.reminder-schedule-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+.reminder-schedule-grid label{display:flex;flex-direction:column;gap:7px;font-weight:600}
+.reminder-schedule-grid input[type=time]{max-width:100%;min-width:0;padding:10px;border:1px solid #d7e1db;border-radius:10px;background:#fff;color:#17372e}
+.guide-no-model{margin:12px 0 16px;padding:14px;border:1px solid #dfe6dd;border-radius:14px;background:#f7faf5}
+.guide-no-model p{margin:0 0 12px;line-height:1.5}
+@media(max-width:380px){.reminder-schedule-grid{grid-template-columns:1fr}}

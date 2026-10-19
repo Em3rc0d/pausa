@@ -13,3 +13,9 @@ test('cada rutina contiene ejercicios existentes con instrucciones',()=>{
 });
 test('las rutinas de escritorio no requieren colchoneta',()=>{for(const r of routines.filter(x=>x.category==='escritorio'))for(const id of r.ids)assert.equal(exercises[id].place.includes('colchoneta'),false)});
 test('el catálogo inicial es original y no usa media externa',()=>{assert.ok(!/gymvisual\.com|raw\.githubusercontent\.com|\.gif\b/i.test(src))});
+
+test('Pausa sentado existe y no exige ponerse de pie',()=>{
+ const r=routines.find(r=>r.id==='seated');assert.ok(r);
+ assert.equal(r.total,r.ids.reduce((sum,id)=>sum+exercises[id].seconds,0));
+ for(const id of r.ids)assert.match(exercises[id].place,/Sentado|silla/i);
+});

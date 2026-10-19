@@ -10,7 +10,7 @@ test('composición cancelable, errores explícitos y respeto al ahorro de datos'
  const ui=read('agent-ui.js');assert.match(ui,/conn.saveData/);assert.match(ui,/cancelGeneration/);assert.match(ui,/No he podido componer/);assert.match(ui,/snapshot!==JSON.stringify\(draft\)/);
 });
 test('versión y worker generativo coinciden con los recursos de la PWA',()=>{
- assert.match(read('agent-ui.js'),/agent-worker\.js\?v=1\.11\.0/);assert.match(read('index.html'),/Privado · v1\.11\.0/);assert.match(read('sw.js'),/agent-planner.js/);
+ assert.match(read('agent-ui.js'),/agent-worker\.js\?v=1\.12\.0/);assert.match(read('index.html'),/Privado · v1\.12\.0/);assert.match(read('sw.js'),/agent-planner.js/);
 });
 
 test('la guía identifica la escala como cansancio/rigidez y no ofrece un bloqueo numérico por dolor',()=>{
@@ -19,4 +19,10 @@ test('la guía identifica la escala como cansancio/rigidez y no ofrece un bloque
 
 test('el aviso aparece antes del formulario y crear no impone un cuestionario adicional',()=>{
  const ui=read('agent-ui.js');assert.ok(ui.indexOf('guide-general-notice')<ui.indexOf('<form id="agentForm"'));assert.match(ui,/problema frecuente, persistente o que empeora/);assert.doesNotMatch(ui,/chooseSafety\(\(\)=>generate/);assert.doesNotMatch(ui,/pain-outside-scope/);
+});
+
+test('camino sentado inmediato y aviso de modelo pesado',()=>{
+ assert.match(read('app.js'),/data-routine="seated"/);
+ assert.match(read('agent-ui.js'),/sin IA ni descarga/);
+ assert.match(read('app.js'),/showSystemReminder/);
 });

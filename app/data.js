@@ -25,6 +25,7 @@ const EXERCISES = Object.freeze({
 });
 const ROUTINES = Object.freeze([
   {id:'express',name:'Pausa express',badge:'Para empezar',category:'escritorio',tone:'mint',description:'Sal de la silla y recarga energía sin romper tu concentración.',ids:['walk','shoulders','pelvisChair','shift'],total:200,level:'Muy suave',icon:'spark'},
+  {id:'seated',name:'Pausa sentado',badge:'Sin levantarte',category:'escritorio',tone:'mint',description:'Tres movimientos breves para hacer sentado sin descargar IA.',ids:['shoulders','pelvisChair','torso'],total:145,level:'Muy suave',icon:'coffee'},
   {id:'desk',name:'Reset de escritorio',badge:'Sin colchoneta',category:'escritorio',tone:'peach',description:'Movimientos amables para cuello, espalda y cadera.',ids:['shoulders','torso','pelvisChair','walk','shift'],total:250,level:'Muy suave',icon:'sun'},
   {id:'lumbar',name:'Movilidad lumbar',badge:'Para después del trabajo',category:'movilidad',tone:'lavender',description:'Secuencia tranquila para recuperar movilidad y explorar qué te sienta bien.',ids:['pelvicFloor','catCow','knees','walk'],total:250,level:'Suave',icon:'wave'},
   {id:'strength',name:'Espalda y cadera',badge:'Fortalecimiento suave',category:'fuerza',tone:'yellow',description:'Trabajo gradual de glúteos, piernas y control del tronco.',ids:['pelvicFloor','bridge','birdDog','sitStand','walk'],total:320,level:'Adaptable',icon:'strength'}

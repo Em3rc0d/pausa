@@ -6,3 +6,13 @@ test('normaliza datos corruptos y frecuencias no permitidas',()=>{const s=C.norm
 test('agrupa movimientos por fecha local',()=>{const at=new Date(2026,9,16,12,0).getTime();const logs=[{id:'abc',name:'Pausa',at,seconds:120}];assert.equal(C.dayLogs(logs,C.dateKey(at)).length,1);assert.equal(C.sumMinutes(logs),2);assert.equal(C.week(logs,at).at(-1).minutes,2)});
 test('rachas continuas consideran ayer si hoy aún no hay actividad',()=>{const now=new Date(2026,9,16,12).getTime();const yesterday=new Date(2026,9,15,12).getTime();const prev=new Date(2026,9,14,12).getTime();const log=x=>({id:String(x),name:'Pausa',at:x,seconds:60});assert.equal(C.streak([log(yesterday),log(prev)],now),2);assert.equal(C.streak([log(now),log(prev)],now),1)});
 test('restaura una sesión de forma pausada',()=>{const s=C.normalize({session:{routineId:'express',index:1,remaining:17,paused:false}});assert.equal(s.session.paused,true);assert.equal(s.session.remaining,17)});
+
+test('la agenda mantiene compatibilidad y valida el reloj',()=>{
+ const a=C.normalize({reminders:{enabled:true,interval:30}});assert.equal(a.reminders.scheduleEnabled,false);
+ const b=C.normalize({reminders:{scheduleEnabled:true,start:'99:99',end:'18:00'}});assert.equal(b.reminders.start,'09:00');
+});
+test('la agenda evita el domingo y abre el lunes a las 09:00',()=>{
+ const r={scheduleEnabled:true,start:'09:00',end:'18:00',weekdaysOnly:true};
+ const d=new Date(C.nextAllowedReminder(new Date(2026,9,18,11).getTime(),r));
+ assert.equal(d.getDay(),1);assert.equal(d.getHours(),9);assert.equal(d.getMinutes(),0);
+});

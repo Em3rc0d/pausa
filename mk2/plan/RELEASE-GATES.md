@@ -3,7 +3,7 @@
 | Gate | Prueba exigida | Estado |
 |---|---|---|
 | G01 | árbol/commit SHA e identificación de cambios | CANDIDATE |
-| G02 | npm run check completo; integridad de 112 GIF y posters | PENDIENTE EJECUCIÓN |
+| G02 | npm run check completo; integridad de 112 GIF y posters | PASS 52/52 sobre d411187; REVALIDAR HEAD |
 | G03 | end-to-end rutina sentada y alertas en navegadores reales | PENDIENTE |
 | G04 | instalación PWA, upgrade SW, offline, cuota | PENDIENTE |
 | G05 | notificaciones granted/denied; suspensión, múltiples tabs, horario, DST | PENDIENTE |

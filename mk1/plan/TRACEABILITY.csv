@@ -1,0 +1,31 @@
+requirement,components,tests,coverage_note
+RF-001,app/app.js,app/tests/experience.test.js,Navegación histórica; cobertura de rutas requiere prueba de navegador
+RF-002,app/app.js;app/core.js,app/tests/core.test.js,Intervalos y normalización; entrega sujeta al navegador
+RF-003,app/app.js,app/tests/experience.test.js,Permisos requieren prueba manual
+RF-004,app/data.js,app/tests/catalog.test.js,Catálogo e instrucciones
+RF-005,app/app.js;app/agent-ui.js;app/core.js,app/tests/core.test.js,Sesión guía probada históricamente en navegador
+RF-006,app/fullbody.js;app/app.js,app/tests/fullbody.test.js;app/tests/media.test.js,Integridad y recursos; búsqueda/paginación requieren navegador
+RF-007,app/agent-core.js;app/agent-ui.js,app/tests/agent.test.js;app/tests/experience.test.js,Elegibilidad y semántica
+RF-008,app/agent-core.js;app/agent-ui.js,app/tests/agent.test.js,Modalidad visible probada históricamente
+RF-009,app/agent-core.js,app/tests/agent.test.js,Solo candidatos; objetivo conservado
+RF-010,app/agent-worker.js;app/agent-planner.js,app/tests/agent.test.js;app/tests/grammar.test.js,Inferencia real histórica; unitarios no ejecutan modelo
+RF-011,app/agent-planner.js,app/tests/agent.test.js;app/tests/grammar.test.js,"Cantidad, familias, cobertura y gramática"
+RF-012,app/agent-core.js;app/agent-ui.js,app/tests/agent.test.js;app/tests/experience.test.js,"Alcance y patrones explícitos, no diagnóstico"
+RF-013,app/agent-ui.js,app/tests/agent.test.js,Hidratación y duración; UI histórica
+RF-014,app/agent-ui.js;app/agent-planner.js,app/tests/agent.test.js;app/tests/grammar.test.js,Variación/omisión históricas en navegador
+RF-015,app/agent-ui.js,app/tests/experience.test.js,Cancelación/contexto; prueba histórica de navegador
+RF-016,app/agent-ui.js;app/agent-core.js,app/tests/agent.test.js;app/tests/experience.test.js,"Fallo explícito, sin lista falsa de IA"
+RF-017,app/core.js;app/app.js;app/agent-ui.js,app/tests/core.test.js,Normalización y restauración estática
+RF-018,app/core.js;app/app.js,app/tests/core.test.js,Cálculos; exportar/eliminar requieren navegador
+RF-019,app/sw.js,app/tests/update.test.js;app/tests/media.test.js,Offline completo pendiente
+RF-020,app/styles.css;app/agent-ui.js;app/app.js,app/tests/experience.test.js,Axe/responsive históricos; evaluación manual amplia pendiente
+RNF-001,app/agent-ui.js;app/agent-worker.js,app/tests/experience.test.js,Contrato de privacidad inspeccionado; no es auditoría de red exhaustiva
+RNF-002,app/assets/fullbody/catalog.json,app/tests/fullbody.test.js;app/tests/media.test.js,Hashes originales y manifiesto de importación
+RNF-003,app/index.html;app/manifest.webmanifest,app/tests/update.test.js,Hosting estático documentado; publicación histórica
+RNF-004,app/agent-worker.js;mk1/build/source-manifest.json,app/tests/update.test.js;app/tests/grammar.test.js,Versión/revisión en código; snapshot exacto
+RNF-005,app/app.js;app/styles.css,app/tests/experience.test.js,Axe y teclado históricos; revisión manual amplia pendiente
+RNF-006,app/styles.css,app/tests/experience.test.js,Anchos históricos 320–1440; dispositivos reales pendientes
+RNF-007,app/agent-ui.js;app/agent-planner.js,app/tests/experience.test.js;app/tests/agent.test.js,Fallo sin falsa atribución a IA
+RNF-008,app/core.js;app/agent-core.js;app/agent-planner.js;app/agent-worker.js,app/tests/core.test.js;app/tests/agent.test.js;app/tests/grammar.test.js,Separación de contratos y pruebas
+RNF-009,app/core.js;app/app.js,app/tests/core.test.js,Normalización local; almacenamiento real depende del navegador
+RNF-010,app/AI-LOCAL.md;app/agent-worker.js,app/tests/experience.test.js,Tamaño documentado; presupuesto móvil físico sin validar

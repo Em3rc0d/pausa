@@ -1,0 +1,12 @@
+{
+ "name":"Pausa — Pausas activas para tu jornada",
+ "short_name":"Pausa",
+ "start_url":"./",
+ "scope":"./",
+ "display":"standalone",
+ "background_color":"#f6f8f5",
+ "theme_color":"#1e6258",
+ "lang":"es",
+ "description":"Pausas activas, movilidad y movimiento para personas que pasan horas sentadas",
+ "icons":[{"src":"assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "pausa-pwa",
+  "version": "1.11.0",
+  "private": false,
+  "description": "Pausas activas para quienes trabajan muchas horas sentados",
+  "license": "MIT",
+  "scripts": {
+    "start": "python -m http.server 4173",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check agent-planner.js && node --check agent-core.js && node --check agent-ui.js && node --check agent-worker.js && node --check data.js && node --check core.js && node --check app.js && node --check sw.js && node --check fullbody.js && node --test tests/*.test.js"
+  }
+}

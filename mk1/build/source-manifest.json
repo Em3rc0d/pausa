@@ -1,0 +1,1474 @@
+{
+  "schema": 1,
+  "version": "1.11.0",
+  "imported_on": "2026-10-19",
+  "source_archive": "pausa-v1.11.0-codigo-completo.zip",
+  "archive_sha256": "da2b784661199b62220a899f4613f9b409e66373d7ba3048baf0adbc9ab0407a",
+  "files": [
+    {
+      "path": "app/AI-LOCAL.md",
+      "bytes": 7035,
+      "sha256": "51cca60f757ff9aa67ef6acc7dde0df77f0683ea8feef1863dfa65c66b803730"
+    },
+    {
+      "path": "app/CHANGELOG-1.10.md",
+      "bytes": 967,
+      "sha256": "7649a6f2fcee5386f2b3570afa915f33fec65cb52b3a2468de12c45b8f2eae72"
+    },
+    {
+      "path": "app/CHANGELOG-1.11.md",
+      "bytes": 1106,
+      "sha256": "160a9f2fea4bf444b939e7841024383f71c37f4cf31cd774d0be0bfec6773d21"
+    },
+    {
+      "path": "app/CHANGELOG-1.5.md",
+      "bytes": 996,
+      "sha256": "5b0072e83aebf6984a5dca2a233083e27f6dc4f123693d67205b0757e89b80bd"
+    },
+    {
+      "path": "app/CHANGELOG-1.6.md",
+      "bytes": 1547,
+      "sha256": "d706a1fa3bcf9365b5fdb42a0c08263ced44c0a2064be4b97357754d072a2352"
+    },
+    {
+      "path": "app/CHANGELOG-1.7.md",
+      "bytes": 938,
+      "sha256": "b1202ae56fbc10903b3421edd1455e5e96db0f0ca953ea91e416fcf766879ccf"
+    },
+    {
+      "path": "app/CHANGELOG-1.8.md",
+      "bytes": 1090,
+      "sha256": "caad0467ff100cc8e224486777959928ad5d090068bd416f599bbd87bb2703e3"
+    },
+    {
+      "path": "app/CHANGELOG-1.9.md",
+      "bytes": 1153,
+      "sha256": "344690b58d5d88647d96c073120ef3d9e0de239be1458dad34032d6cded1e751"
+    },
+    {
+      "path": "app/CONTRIBUTING.md",
+      "bytes": 979,
+      "sha256": "7b461a927a6795bbd64062ac3f0089d2e0389315c43a75087cf84b044861be5b"
+    },
+    {
+      "path": "app/DESIGN.md",
+      "bytes": 5024,
+      "sha256": "7c375ec1e010538b4e542f52875739b8e54df49b89e40a7d919c2a3c573ad279"
+    },
+    {
+      "path": "app/LICENSE",
+      "bytes": 1075,
+      "sha256": "f2bdc36cbf9c2d827d77e28fc3b8772868da64725805f284d46446069a375497"
+    },
+    {
+      "path": "app/README.md",
+      "bytes": 12324,
+      "sha256": "5af66cec0b87fd4d06e7dd9894a8adae80216aa274b4dde256c97407059941cd"
+    },
+    {
+      "path": "app/SELECTION-SPEC-1.10.md",
+      "bytes": 3886,
+      "sha256": "d40cc8ac087443335741a18eac06d7e229065ed757afd85f3b7737f7de8792c7"
+    },
+    {
+      "path": "app/SELECTION-SPEC.md",
+      "bytes": 3947,
+      "sha256": "d85d3b79a0e55ae66952ac5019a866499cdcb21ee82b6b69980d917bf386bfee"
+    },
+    {
+      "path": "app/VERIFICATION-1.10.md",
+      "bytes": 2870,
+      "sha256": "be8ba4b16eb3953b536e8ff7ac49d6e60ad27e12ef0ab6e9a81e4fd18abdc528"
+    },
+    {
+      "path": "app/VERIFICATION-1.7.md",
+      "bytes": 4865,
+      "sha256": "695f57208d7834b94f08c7d58afbab5b88259c31f9474384065db0697dc4307a"
+    },
+    {
+      "path": "app/VERIFICATION-1.8.md",
+      "bytes": 3134,
+      "sha256": "3c05bf2fe83e6130981464a639893e55dba232c5055b9cce543cc861bf177e51"
+    },
+    {
+      "path": "app/VERIFICATION-1.9.md",
+      "bytes": 3397,
+      "sha256": "beb301b1d529ee60c983a86cc78868355cfe694a1e7d5ce457e4b43d146a2185"
+    },
+    {
+      "path": "app/VERIFICATION.md",
+      "bytes": 2982,
+      "sha256": "04f6f723b4ef5e7f479588d6fd79399541e1fd2528fc08fee02b67502c6ad5c2"
+    },
+    {
+      "path": "app/_headers",
+      "bytes": 99,
+      "sha256": "d462365b52e133c43461f38cab658a11a35dfb15769872879fa63faeacc57844"
+    },
+    {
+      "path": "app/agent-core.js",
+      "bytes": 14461,
+      "sha256": "a59c4a38ff3e0ea5e6b69b29ee2a4fd36554d165a2264fbda11d6b071c57a3c9"
+    },
+    {
+      "path": "app/agent-planner.js",
+      "bytes": 12075,
+      "sha256": "f50d6327a0b4372c8fa8a429c5b4cb08ed8e139e89506c342c8f4a492e9788c7"
+    },
+    {
+      "path": "app/agent-ui.js",
+      "bytes": 25155,
+      "sha256": "aba18440ef09629993ba7ca22d59f1d94fb95e1949c18e20f7bcb13a4a6582f6"
+    },
+    {
+      "path": "app/agent-worker.js",
+      "bytes": 1927,
+      "sha256": "34c37b98745aebc6181b512fce40d86abbf675bd42751360c1a5ebc5880fbbeb"
+    },
+    {
+      "path": "app/app.js",
+      "bytes": 49791,
+      "sha256": "16d8d50551773f2068d64543dbdd3a6273d424afe6d078d8460746a455223497"
+    },
+    {
+      "path": "app/assets/exercises/birdDog.gif",
+      "bytes": 134685,
+      "sha256": "29058e594d68af47e4ea5d11d9f0c1e64f6aa8c99b3a519648323d191e4bd7d3"
+    },
+    {
+      "path": "app/assets/exercises/birdDog.png",
+      "bytes": 21155,
+      "sha256": "8fb1f3c13cb9785597d18bb1aec84a83f31e745e5320ca4a8a7b971753c763f2"
+    },
+    {
+      "path": "app/assets/exercises/bridge.gif",
+      "bytes": 119187,
+      "sha256": "23d19e515740cf408904e8929ab3f0602d7aecd694d442e94950114ca5c85eae"
+    },
+    {
+      "path": "app/assets/exercises/bridge.png",
+      "bytes": 18474,
+      "sha256": "8a738f860b9c464f94d9011332a136574f0b2581a4432e2dd76d36e516683fc9"
+    },
+    {
+      "path": "app/assets/exercises/catCow.gif",
+      "bytes": 138094,
+      "sha256": "07016baa38898c9cd246f5fc61882f360111b342d8935caf7d59fb9e21d3cb74"
+    },
+    {
+      "path": "app/assets/exercises/catCow.png",
+      "bytes": 18455,
+      "sha256": "b1dacf89ea545c9480cac48bad1e357c54d2d9b44651184f26ea48884c2294e2"
+    },
+    {
+      "path": "app/assets/exercises/knees.gif",
+      "bytes": 121789,
+      "sha256": "525a14230b4de224bc290dce02ae8b59601332d3ca11d188e8e1f06dcbf3257c"
+    },
+    {
+      "path": "app/assets/exercises/knees.png",
+      "bytes": 19531,
+      "sha256": "634e841fef2c55fe66416049caa60c2efda709d93891f64ad87f96ffc7a224cc"
+    },
+    {
+      "path": "app/assets/exercises/pelvicFloor.gif",
+      "bytes": 117327,
+      "sha256": "5d56e3e2b917ff00cb70fb28fa641ca2e82daa0fb5ae61f18ae6fd7c3166dde9"
+    },
+    {
+      "path": "app/assets/exercises/pelvicFloor.png",
+      "bytes": 17836,
+      "sha256": "ba4b5eb5713d3b82cb3fa8b509cdf3567811f71a9b6b8ee604362df0db973f62"
+    },
+    {
+      "path": "app/assets/exercises/pelvisChair.gif",
+      "bytes": 122866,
+      "sha256": "cfceb67bdeb717f51d5e9b11abe39bab0b8744797775c483c4f9a19da2f3b4a9"
+    },
+    {
+      "path": "app/assets/exercises/pelvisChair.png",
+      "bytes": 18508,
+      "sha256": "ded7f3322689ffd854ed38cc87d6fff5b19774844e4626ad956a5948154eaf48"
+    },
+    {
+      "path": "app/assets/exercises/shift.gif",
+      "bytes": 125022,
+      "sha256": "2382a01267b3651370a18f6a297ed516cc9c5e9d70857f48f5dce7cc2a31dc28"
+    },
+    {
+      "path": "app/assets/exercises/shift.png",
+      "bytes": 17679,
+      "sha256": "05be8f126be435e0257cb93f70759a5dc3f1c5da87802ff15937f6919ed5c26d"
+    },
+    {
+      "path": "app/assets/exercises/shoulders.gif",
+      "bytes": 119952,
+      "sha256": "1baa695136ff6595a93b3606783a2c1e82e313520fc5ee21c6fa6b3563b55710"
+    },
+    {
+      "path": "app/assets/exercises/shoulders.png",
+      "bytes": 18198,
+      "sha256": "0878a1f334ec8b62e22f219c12392a05ae8d8065f1e304f5cca587ec6609269d"
+    },
+    {
+      "path": "app/assets/exercises/sitStand.gif",
+      "bytes": 120343,
+      "sha256": "47eb3abb0450261ca2c6e064570d3afa238f7fb8ac2868683c86e667c14f70ad"
+    },
+    {
+      "path": "app/assets/exercises/sitStand.png",
+      "bytes": 16529,
+      "sha256": "80df1469d598036d557511aef2647367b0726bd1ac6378342e3e72c3abdbc156"
+    },
+    {
+      "path": "app/assets/exercises/torso.gif",
+      "bytes": 124747,
+      "sha256": "8858f131b12262319edf2a66f617e474b980b420ce28ffe65d9834267c3247a6"
+    },
+    {
+      "path": "app/assets/exercises/torso.png",
+      "bytes": 20037,
+      "sha256": "06fc46690f16f06fffa0305c0048dc266a467f15d5f417c6c81467c507a118a6"
+    },
+    {
+      "path": "app/assets/exercises/walk.gif",
+      "bytes": 121512,
+      "sha256": "f65b19706513b8bf8861c24ac9b019404005293db9a5247aaa37817c5f206a03"
+    },
+    {
+      "path": "app/assets/exercises/walk.png",
+      "bytes": 18749,
+      "sha256": "43fdf6e9a4bab5efd2091716885ebb4536722f3e3eefe5a26a9d5180ed253f42"
+    },
+    {
+      "path": "app/assets/fullbody/LICENSE-MEDIA.txt",
+      "bytes": 280,
+      "sha256": "ee17962c15830bcc064cbded4898fd2268f463c804e52717767a7022d6524081"
+    },
+    {
+      "path": "app/assets/fullbody/catalog.json",
+      "bytes": 63429,
+      "sha256": "0d2541c3d2d2161d01c011eb48230c8a53471cc1ccdeefaff5c968b1a1f9e28c"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/001-shrug-left.gif",
+      "bytes": 903095,
+      "sha256": "2532ba1417ea18a694ca97961740306c0fa1b0c927599a5d0b4b8a992e5bcd97"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/002-shrug-right.gif",
+      "bytes": 1048723,
+      "sha256": "05960571421fca0fd5f6530418d666c91596913f109368534b2c5c1301904f8f"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/003-shrug-bilateral.gif",
+      "bytes": 1030209,
+      "sha256": "f0ab61bc4982ee5a644716d52f0072d63c785ce34fbfe7e0374a1d02371c4828"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/004-shoulder-forward-left.gif",
+      "bytes": 1229178,
+      "sha256": "3b9746ab996378c0743c47cf2592bc22b207216b7e0c2e2c328aa3f4d0e992d0"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/005-shoulder-forward-right.gif",
+      "bytes": 956258,
+      "sha256": "a1a5c89ffbcdb63d1aaa52f9e56597b175dc2e27f4f0ded4b5f60b1a519944d2"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/006-shoulder-forward-bilateral.gif",
+      "bytes": 1223880,
+      "sha256": "523da7d70332a9351d695a90cb4fda38924f600a0e301d3ccd9d14b7425f61e4"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/007-shoulder-backward-left.gif",
+      "bytes": 1057261,
+      "sha256": "3c81c427bc87985d675519b3a399aa4f46450d3ebf028d2c763d82966101c509"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/008-shoulder-backward-right.gif",
+      "bytes": 1140882,
+      "sha256": "4c0e2ab4a063062d49e608c35e147d6528a3fb5b0ceda949a3ddaa9e08b65879"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/009-shoulder-backward-bilateral.gif",
+      "bytes": 1044095,
+      "sha256": "58114c31d80f0dcae0c67b989e3ea87470e8240929af1d7568f2a288f60f1a6b"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/010-side-raise-left.gif",
+      "bytes": 897780,
+      "sha256": "764fba1072360c0d76ca7204e9f083ea74d91fdf056783ca78e26175ad72ce76"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/011-side-raise-right.gif",
+      "bytes": 905458,
+      "sha256": "1c0af56c92887c8e99198aac2dd1598e0fa465db51b1f6373d8edc1cf5aa786f"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/012-side-raise-bilateral.gif",
+      "bytes": 871171,
+      "sha256": "2f1c58cd455ea827eaebc8bfa0f2717618a702acf3831e41c6b37d971f9f85de"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/013-front-raise-left.gif",
+      "bytes": 1001010,
+      "sha256": "6a000e1e18584b66d9ae7fef7dd1ecb27e0957d7962acace6f98a60ea9c6c668"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/014-front-raise-right.gif",
+      "bytes": 785566,
+      "sha256": "398b70e25ce8ce28ee095c76051d3612d0a9e2114c82eba449fd215cfd09baff"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/015-front-raise-bilateral.gif",
+      "bytes": 765102,
+      "sha256": "a71cb6454877068eeba3bb9beb2abe4b4deffe749e3a167daff107f20f8a4f45"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/016-diagonal-reach-left.gif",
+      "bytes": 971925,
+      "sha256": "fb2c4784363a150818e3541ad118e2a5779cf272410aa468cfcc8415d9dfa67f"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/017-diagonal-reach-right.gif",
+      "bytes": 865174,
+      "sha256": "d36ec444028087d6b3df1aa5d456052817e8aec85e823b4098728b0934cebd7c"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/018-diagonal-reach-bilateral.gif",
+      "bytes": 970420,
+      "sha256": "13791fe7e11ef1cfb898531b8f3fa85a7d4a09172cdcdf4533db7a131d6dfdef"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/019-overhead-reach-left.gif",
+      "bytes": 788867,
+      "sha256": "c95d9f32f67ae43c5f1926ca027377545227b93ca1829c3de435946f79f2804e"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/020-overhead-reach-right.gif",
+      "bytes": 780956,
+      "sha256": "d58265553cc6b6fcb1babf76344ec49d94126a4e1ea3fcf5d49f6d46e16277d4"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/021-overhead-reach-bilateral.gif",
+      "bytes": 878773,
+      "sha256": "77f540dca9f4f3453bd0eba68693acf34b36114c5aa874bab021f286f09267cf"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/022-elbow-curl-left.gif",
+      "bytes": 952595,
+      "sha256": "95c3945f7c53ae613d03d0b7ce193dea785bc06fdf124c3e47ec83cebc697a71"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/023-elbow-curl-right.gif",
+      "bytes": 993190,
+      "sha256": "b6d15db16f113f3dfd3a9cd2f0e4665deadf4f33e6c783b426b16d26ba886352"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/024-elbow-curl-bilateral.gif",
+      "bytes": 862984,
+      "sha256": "f61f98bb2a12f21586511ec174cedb666cbbdab1d4f2c1ff26ed60845ee72a35"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/025-elbow-overhead-left.gif",
+      "bytes": 735563,
+      "sha256": "eced2043680989729468d05553fe5c3f33e6ba6962f40aba7ec8070de10c8d0b"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/026-elbow-overhead-right.gif",
+      "bytes": 850476,
+      "sha256": "bf1db63a4c60b44891cca294f5146d44fdc456c8752939fb1759a97c802126a6"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/027-elbow-overhead-bilateral.gif",
+      "bytes": 777712,
+      "sha256": "5d3d67dbeba26f0cfde0d2aebf8e8c2bcf4e093d9f822e8f7f9d0dc504a82d68"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/028-forearm-turn-left.gif",
+      "bytes": 842152,
+      "sha256": "4a39dee5b83c0d72c7fc1f27e25668c79cc6792a9a1a5ece39e15f4c249c04a4"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/029-forearm-turn-right.gif",
+      "bytes": 888301,
+      "sha256": "51e54aeadaa867c1f34f6bb7ff6c5cce4dc55f7989cde41a7eb0bfd4f7c2aced"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/030-forearm-turn-bilateral.gif",
+      "bytes": 999883,
+      "sha256": "fc7beee9de0fec3d73f95cf6fdd6ea1cb39cf2c013ecb1e5c1cdc86e7bfd2baa"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/031-wrist-flex-left.gif",
+      "bytes": 891839,
+      "sha256": "428d41ba4e6e3e076f6c86f62ccd055734d303f79dc8b2c62423223265cc0ab9"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/032-wrist-flex-right.gif",
+      "bytes": 1001333,
+      "sha256": "d328b08d04b66475f811edb0360603c1640a5268b9f62a01da2545b2d24ce9cc"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/033-wrist-flex-bilateral.gif",
+      "bytes": 938353,
+      "sha256": "3622e8d0b3460f3f45502805242968c40bc3365bf009af801e5ccf9011557d22"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/034-wrist-extend-left.gif",
+      "bytes": 876680,
+      "sha256": "caf7ad3808f026d01fc818f172f3d541a420ca403139939530af63bf3b55760a"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/035-wrist-extend-right.gif",
+      "bytes": 947972,
+      "sha256": "44751f9fc7d9e8a83582bd4b5862068d4544343432713f2df453663b9b0124ab"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/036-wrist-extend-bilateral.gif",
+      "bytes": 913808,
+      "sha256": "91bf578acc85b6c5a485d3714e0d5db3557c5fd77fb0d7e85d23630fa1117c35"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/037-fingers-left.gif",
+      "bytes": 1001667,
+      "sha256": "e2a12226a3377a50e2e164a5294cbeee5e5e2e7b7e1127ee3bf63102afc18534"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/038-fingers-right.gif",
+      "bytes": 875858,
+      "sha256": "74913e514c80a0edf459b8a6075c30a63e0d4d617971363b704395e211a49346"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/039-fingers-bilateral.gif",
+      "bytes": 919782,
+      "sha256": "7b576561a35be687ae090b5c3f8306ea9afb6cd2a3c79028071ae3e3316863b0"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/040-wrist-circle-left.gif",
+      "bytes": 954198,
+      "sha256": "f5bf54abc502e65f7dd5f499417ab7d2d749e94b5411410597e2ef4bd4cf124b"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/041-wrist-circle-right.gif",
+      "bytes": 1171746,
+      "sha256": "c523c85278eb5eea27dc3afa111e4356427a31339fca1deec5504a1490d19085"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/042-wrist-circle-bilateral.gif",
+      "bytes": 1041109,
+      "sha256": "e0848f638bdf5b6a1692727c07fa6373a01943ab948b35ded51b852e2055a69b"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/043-standing-side-bend-left.gif",
+      "bytes": 952952,
+      "sha256": "5a4db0770fd74049fa4d20e0666b16b2841a815a58f2b207b181a62387f544ae"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/044-standing-side-bend-right.gif",
+      "bytes": 893030,
+      "sha256": "64656be20813c5a79b262b77ae82472c98c9f88a4845b03f73998797eadcd4dc"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/045-standing-side-bend-bilateral.gif",
+      "bytes": 978377,
+      "sha256": "8c391a1508fc884f1f5dee8adb3dac78e4fc6762ff44114080941afbca9d4e4d"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/046-neck-side-left.gif",
+      "bytes": 1100913,
+      "sha256": "1349ab5f36df84a2c1ff6be6bc1ecdf683a0127a39274d255e929b428ecb1ecb"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/047-neck-side-right.gif",
+      "bytes": 886660,
+      "sha256": "8ccc93b22fe328acf42a2f0f1ab1968700df99a2d3d6f85d4df74a769b0dc141"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/048-neck-side-bilateral.gif",
+      "bytes": 1217455,
+      "sha256": "0d12c2f653967bf773000651677b199df341f3a9b1686f465509ed3cf6387508"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/049-neck-turn-left.gif",
+      "bytes": 913106,
+      "sha256": "625dc3fba9a7ef21692a24a36cd653b29063827636fea67d0249289bc714209c"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/050-neck-turn-right.gif",
+      "bytes": 713856,
+      "sha256": "ac7d439e1e9748ed7cff20da90839de6a7fc5fa9371528466015da8a9393ed24"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/051-neck-turn-bilateral.gif",
+      "bytes": 1254136,
+      "sha256": "733351f532c6c7f8f8bb1919b9006bfa83390ea24594214e58fafa707a4ee88f"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/052-hip-abduction-left.gif",
+      "bytes": 936547,
+      "sha256": "1b9895e3ea0ffdcb24bbff79b6633aca9982614c813407495f187e989eed9205"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/053-hip-abduction-right.gif",
+      "bytes": 918839,
+      "sha256": "8d30764f96bc3d6dabe0e04700ed58bf5dfeae643637056c0d7cda82be166cb8"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/054-hip-abduction-bilateral.gif",
+      "bytes": 1141133,
+      "sha256": "73b5495de6c98b10b52035cf9990149873d86bdb3308f8b097305e81e5487646"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/055-hip-flexion-left.gif",
+      "bytes": 990606,
+      "sha256": "eb5af7db5e0715d7c119973fefec121815992889818acff73b4801d627b62098"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/056-hip-flexion-right.gif",
+      "bytes": 966341,
+      "sha256": "4de050b98bb7dd8c7ccc32c473701471efc9ffc577be9bf3ecf96e2657df9178"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/057-hip-flexion-bilateral.gif",
+      "bytes": 1040484,
+      "sha256": "fcf1cfaa12b3de16354b80ddab6aaeb71dd0fd64bcc88afcd6c00e2f39b963cc"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/058-hip-extension-left.gif",
+      "bytes": 737049,
+      "sha256": "398dc6f27d31aa9107757a74d9adacbcbc5f8e364d153bf64adc251b0b732318"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/059-hip-extension-right.gif",
+      "bytes": 1093023,
+      "sha256": "b3c5402ddd60acfd97ec97354701e5332e1bb1a4a115bb78bcf86be5ad3e07a7"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/060-hip-extension-bilateral.gif",
+      "bytes": 1143995,
+      "sha256": "cbd914b215fe9118b81fa7829647591d25c25f9173788a20f8973b7d7c9dfd0f"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/061-hamstring-curl-left.gif",
+      "bytes": 828993,
+      "sha256": "15eb2566a181b4d602c17109f78bc7092a1ace4680b19ea0a10962c113bac203"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/062-hamstring-curl-right.gif",
+      "bytes": 988700,
+      "sha256": "24921514aaa2408c62ee07722c4a0ad796608ed3907b056b0a6206fdebff5f85"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/064-seated-knee-left.gif",
+      "bytes": 1108545,
+      "sha256": "f24d3f8bb3834329e4f56cf00cf33e87923101e756c6a813883679da6a6ad013"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/065-seated-knee-right.gif",
+      "bytes": 1104047,
+      "sha256": "a47834c65263682238d64243aa23592b6a8ba2d6de011d28fc83ce240e00e397"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/066-seated-knee-bilateral.gif",
+      "bytes": 1114499,
+      "sha256": "2894bf965b2bb7c56e03c566c6e96084a2cb44e4e144fbf331d40d7f2ad154cb"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/067-seated-march-left.gif",
+      "bytes": 753767,
+      "sha256": "da66260ea58ff55ff62885f4fd894277c1ac88549482c3eee0056af0b1ee6cb9"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/068-seated-march-right.gif",
+      "bytes": 1121356,
+      "sha256": "5ee3424bb7006f8800b27d19a6864bddeab1b898bab65e645990657fbbcc422d"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/069-seated-march-bilateral.gif",
+      "bytes": 1050913,
+      "sha256": "9500941398af6f609d07e22d1f24178be9955a84aebd7d45781107929dd6ca81"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/070-standing-heels-left.gif",
+      "bytes": 894268,
+      "sha256": "e26b6bc5dbbfa77535e4ab6420fd039baf2bf65c82fcd0431457ad6d8d43b865"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/071-standing-heels-right.gif",
+      "bytes": 816012,
+      "sha256": "801a03c705eb1cfd89af3d249a6cc0e9b43bfe75349044de4a32cfc55378f506"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/072-standing-heels-bilateral.gif",
+      "bytes": 911927,
+      "sha256": "79f0cabd4805d3aafc80a85c3f61e2e04e5fa2a462786959a2b53ef7165d30df"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/073-standing-toes-left.gif",
+      "bytes": 592405,
+      "sha256": "d3a603eff84be11a0578aa0ad8d5071ad046dfa3fa8603b697ba3e487cf172ad"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/074-standing-toes-right.gif",
+      "bytes": 901125,
+      "sha256": "61eaa0e1618711867e9c9cbc2e00831ef34172e9842826aa21b1c1bd39df84db"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/075-standing-toes-bilateral.gif",
+      "bytes": 978091,
+      "sha256": "fff4ad1126c8d1566c514ef1a004cddbf0418dff444abe6c46bf35cca43f5a88"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/076-ankle-circle-left.gif",
+      "bytes": 1216015,
+      "sha256": "48cd14789f4208d1a54e07fe07cc392c2c86dc223b73d00e5f1694caa62ad4f6"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/077-ankle-circle-right.gif",
+      "bytes": 1186244,
+      "sha256": "e53e770a90aaa1abc68f05a2f2b95dfc68e99b9cf7ec2cece0f54a39f67feff3"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/078-ankle-circle-bilateral.gif",
+      "bytes": 1330575,
+      "sha256": "681b0bdfbe9d2d27c3b82ccb888a6bd4cbd5f6c43dbaac01eb06b0d04e812420"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/079-seated-heels-left.gif",
+      "bytes": 1029708,
+      "sha256": "f09e11115fab568e5aaaab58f3318558db8f0d305d2a6cb38fd757f36c1d70c0"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/080-seated-heels-right.gif",
+      "bytes": 1150354,
+      "sha256": "d9bf37fc3827d03f695f5f805bd9c15454d6908a75d71e2ecf31798ce6424caa"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/081-seated-heels-bilateral.gif",
+      "bytes": 1071342,
+      "sha256": "60c0b44054eb8e51f21c33f47d89a0dde731cdf5f0d2bf73a6172849025de21c"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/082-seated-toes-left.gif",
+      "bytes": 975726,
+      "sha256": "580277c4773fbaea70c6e47c0904cc75e7cc0c28a317b59fe0af73d5a7c0e7af"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/083-seated-toes-right.gif",
+      "bytes": 935412,
+      "sha256": "6cb440165bf574f7e8e99c9ebefb0dbc9e94f555bb01f2b6222e8755be305a6c"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/084-seated-toes-bilateral.gif",
+      "bytes": 1042004,
+      "sha256": "feb3bfc4265893c87c662a1d58ecc470002e0dd546a83a92dc3aeeace26a2f69"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/085-seated-side-bend-left.gif",
+      "bytes": 1084258,
+      "sha256": "dff16e391ccf7f9e1a9d438efc96452ee0486b20647c20a9ccc735f3c682912a"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/086-seated-side-bend-right.gif",
+      "bytes": 908964,
+      "sha256": "ca6e73771aa71a1057efba7c1c719d6ea69746d13f547bcaaaf637dc6f2897ba"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/087-seated-side-bend-bilateral.gif",
+      "bytes": 1176109,
+      "sha256": "15f86b5c60d50d2c9596a00672d7374901b9b84f035868cba680877536bbbb42"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/088-seated-overhead-left.gif",
+      "bytes": 818169,
+      "sha256": "d9d8b5207bbffd570b7778bb47e8edc03890c6ff04533a1cff02e8988c4fcac6"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/089-seated-overhead-right.gif",
+      "bytes": 905376,
+      "sha256": "cb7e98c921b78c433103002f287b1a7990fa2491e06fa25e8303c71a1cfef2ff"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/090-seated-overhead-bilateral.gif",
+      "bytes": 855766,
+      "sha256": "576802140b5137a5868acaf703cab08bbe5d071717796d61a4d1d633e6d3e762"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/091-scapula-row-left.gif",
+      "bytes": 886786,
+      "sha256": "7d4748af02a5e165bd5708fb2b03b2b10510a1ee1e66d0ab1ec2a5be40d12506"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/092-scapula-row-right.gif",
+      "bytes": 949405,
+      "sha256": "cfd012323e244caf1849f25b82092953db8d90d6a8b86b8147c8193e68deb782"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/093-scapula-row-bilateral.gif",
+      "bytes": 923493,
+      "sha256": "0f1b3135f51de3457665f9dc2cf79534a5624475e8ccf434469165d66fc941ac"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/094-forward-toe-tap-left.gif",
+      "bytes": 1039698,
+      "sha256": "61521bd30b330fcc5fa8aee7151b1b01465c73b012a2f6410527fd22dff8f6e4"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/095-forward-toe-tap-right.gif",
+      "bytes": 833748,
+      "sha256": "bad67a009c2eac7efd6964c0dec040aeaf4ba477af5382a835a29d2f14df09cd"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/096-forward-toe-tap-bilateral.gif",
+      "bytes": 1032434,
+      "sha256": "976738c63f9aca744871bdee8aa89d7a00c2b09a2ebc3d538d2b226e18fad4c1"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/097-side-toe-tap-left.gif",
+      "bytes": 1030856,
+      "sha256": "0a92ab8482b93bcdc97aae35b88fde0046d6f706fc9d6c6342c8be3248d67252"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/098-side-toe-tap-right.gif",
+      "bytes": 994193,
+      "sha256": "251030d7ef2d27a45aefffe2f89ab856ad95f169221b8f2479564ab2dd827b72"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/099-side-toe-tap-bilateral.gif",
+      "bytes": 1031996,
+      "sha256": "32aab6e7580ee397d500428a856250dac66a5cba1159097fe218995bc80f3791"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/100-back-toe-tap-left.gif",
+      "bytes": 1041443,
+      "sha256": "83e86a3a7f32b251e289b9f2abaf3f7772c37f894475c07235e87a80fda1aad4"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/101-back-toe-tap-right.gif",
+      "bytes": 863677,
+      "sha256": "2d037c3b40a0d3642fbba04e0b254b9be7ec1283939ab1779b34c34aa681d5eb"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/102-back-toe-tap-bilateral.gif",
+      "bytes": 1208879,
+      "sha256": "eff9dfe51fa1e83ec973fe7977ac93c677101286292d7d4447a5f6ebef7ef8c8"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/103-forward-heel-tap-left.gif",
+      "bytes": 862963,
+      "sha256": "01f6fec1254d20ccfe9bc016b12eec292f011562cf8003056b17e83a8042e4c1"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/104-forward-heel-tap-right.gif",
+      "bytes": 1086001,
+      "sha256": "ee0c75720c63346a5174c15484f516a4ff022dd7985da1e60aa094b5f794d8ba"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/105-forward-heel-tap-bilateral.gif",
+      "bytes": 844756,
+      "sha256": "525560dd06b0a78c7f04b2a4cf64f8045c229717026bc44d352500abae579ea4"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/106-seated-leg-cross-left.gif",
+      "bytes": 906348,
+      "sha256": "2d87ff52fb417f03d4db2e1e61997a8b01510e161ecfc1bad36484851d8ca4d5"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/107-seated-leg-cross-right.gif",
+      "bytes": 1125123,
+      "sha256": "345e55bd7d7958728e1265b7dc70f5490d3691f52556d8339f32ac5d43df987b"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/108-seated-leg-cross-bilateral.gif",
+      "bytes": 1044420,
+      "sha256": "0083577285a0dee0d84b972997662b3bf190eec91499045e8d89cad5ea28be2e"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/109-pelvic-tilt.gif",
+      "bytes": 787083,
+      "sha256": "a3c91a794e2929b585ee6468fb8018b6fd238fab4fa3ddfe1e3e83c5e6ffc673"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/110-cat-cow.gif",
+      "bytes": 1327820,
+      "sha256": "4aac5725c37d4a5f31d468b8611d9ffba993b81a668f3ecfe920695486fdc140"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/111-knee-rolls.gif",
+      "bytes": 1180640,
+      "sha256": "49e805d700870fc4dcf40544f0f6f492bb2495fcf563473ff3a0d7f57d20d2d4"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/112-glute-bridge.gif",
+      "bytes": 981848,
+      "sha256": "ae9add2b57d2563891061f4c773f4574153aed60f40968b3b9e4e2d97efd7077"
+    },
+    {
+      "path": "app/assets/fullbody/gifs/113-bird-dog.gif",
+      "bytes": 1423796,
+      "sha256": "10a27fde27fac31c65596a73e91c69a9d5af289ec413632e18c5e89cc57457e5"
+    },
+    {
+      "path": "app/assets/fullbody/posters/001-shrug-left.png",
+      "bytes": 166801,
+      "sha256": "21ab16c8faebdd5924de944750dc0e5ae32ed91e0a9a7576c5c5611d9d3d46be"
+    },
+    {
+      "path": "app/assets/fullbody/posters/002-shrug-right.png",
+      "bytes": 161297,
+      "sha256": "3216cce090d1a52c37b1a0e88f66f0306e299a49d710365cc191a5037dd76cc2"
+    },
+    {
+      "path": "app/assets/fullbody/posters/003-shrug-bilateral.png",
+      "bytes": 160670,
+      "sha256": "a6b34e116b1b301c13d1efb0b48de03a3b00781f66f6478dd6e1bf8343f0678d"
+    },
+    {
+      "path": "app/assets/fullbody/posters/004-shoulder-forward-left.png",
+      "bytes": 165303,
+      "sha256": "e0bb89bcd5be8b37503dfa071670985f3221e958c9720513ab2c2c22e31810fb"
+    },
+    {
+      "path": "app/assets/fullbody/posters/005-shoulder-forward-right.png",
+      "bytes": 204534,
+      "sha256": "fd9291ba6854a2a085ddaae205944c9057cd6cc59f2560aa3a0e5bc5f6a79275"
+    },
+    {
+      "path": "app/assets/fullbody/posters/006-shoulder-forward-bilateral.png",
+      "bytes": 167017,
+      "sha256": "8d07271388a8980f315fe8fe77b0adbdb08a47e8acb6c0f8ebfd59d933c21ac3"
+    },
+    {
+      "path": "app/assets/fullbody/posters/007-shoulder-backward-left.png",
+      "bytes": 165786,
+      "sha256": "2e3a7c7c4c83292ab844ac6fca79a3fd6caf4cfb0107bda700c353bd3a06aa9f"
+    },
+    {
+      "path": "app/assets/fullbody/posters/008-shoulder-backward-right.png",
+      "bytes": 172599,
+      "sha256": "33c30630f455edc99855637a86859abc571422e553ffb66cc1edf5a6de68caba"
+    },
+    {
+      "path": "app/assets/fullbody/posters/009-shoulder-backward-bilateral.png",
+      "bytes": 162966,
+      "sha256": "67ba4fb63633b7e3a524b202d51fc27484f97c06b0abea2ecf03020d43b6bf5c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/010-side-raise-left.png",
+      "bytes": 202481,
+      "sha256": "d18b693f34bae5b84c86947087096a6170658cd2c45ce1136000274144e4efe0"
+    },
+    {
+      "path": "app/assets/fullbody/posters/011-side-raise-right.png",
+      "bytes": 166826,
+      "sha256": "18839ec9c63c2f76a1260a20093df7d8c9f1504d1429e24755e3a4d487f4926f"
+    },
+    {
+      "path": "app/assets/fullbody/posters/012-side-raise-bilateral.png",
+      "bytes": 163206,
+      "sha256": "12e7dc02596e54dccb5de4c35041ccf90996c26671a5821dff88ac8efa675438"
+    },
+    {
+      "path": "app/assets/fullbody/posters/013-front-raise-left.png",
+      "bytes": 163281,
+      "sha256": "d10f15b6f8cdd13f5ffe7480d09f16c879c2d506367ab5ef34f6a40067a5b1f0"
+    },
+    {
+      "path": "app/assets/fullbody/posters/014-front-raise-right.png",
+      "bytes": 165068,
+      "sha256": "9816db54d21c1abc99e2d57456877e15a84706c0e589796b81a8c7078664172d"
+    },
+    {
+      "path": "app/assets/fullbody/posters/015-front-raise-bilateral.png",
+      "bytes": 198648,
+      "sha256": "f249e4fdf92ee20b02f8582fae90947ab7222cedd1fb859d396f9566b3840f2e"
+    },
+    {
+      "path": "app/assets/fullbody/posters/016-diagonal-reach-left.png",
+      "bytes": 169781,
+      "sha256": "1c75dd1f459389d6ca7399a919391a975c7baa5427ab2f01fcd940d858ef3755"
+    },
+    {
+      "path": "app/assets/fullbody/posters/017-diagonal-reach-right.png",
+      "bytes": 160123,
+      "sha256": "7485df74bafede6de3025a356576a9362471f2c02e410d0ee49eb7f0da5985a3"
+    },
+    {
+      "path": "app/assets/fullbody/posters/018-diagonal-reach-bilateral.png",
+      "bytes": 158768,
+      "sha256": "97aaac2e9cad498bebfbf07e35f22c341ee7008a5164ee5ee2438575e0ece855"
+    },
+    {
+      "path": "app/assets/fullbody/posters/019-overhead-reach-left.png",
+      "bytes": 158352,
+      "sha256": "6018b3ff8133605dd2a2ff228faf2a54a338556a0b010307fee05647b27e7917"
+    },
+    {
+      "path": "app/assets/fullbody/posters/020-overhead-reach-right.png",
+      "bytes": 150948,
+      "sha256": "ddb3c7d1babe36f9d4ec8b7665bef699c7ce8e982cc999918d1cb3058d95e288"
+    },
+    {
+      "path": "app/assets/fullbody/posters/021-overhead-reach-bilateral.png",
+      "bytes": 163748,
+      "sha256": "597ce41b8840c9cd60390cef6fce47e74d7c621e793bb8bf993f213c6967dec6"
+    },
+    {
+      "path": "app/assets/fullbody/posters/022-elbow-curl-left.png",
+      "bytes": 160523,
+      "sha256": "a48e669bcaec7e457b552632a52eff7e1577b7e8960498210f7cc95555c40e62"
+    },
+    {
+      "path": "app/assets/fullbody/posters/023-elbow-curl-right.png",
+      "bytes": 160769,
+      "sha256": "b859ef0579a5e0d1d744bb229d0c7b39b9a489d8a0ae982a89977a643f72ade0"
+    },
+    {
+      "path": "app/assets/fullbody/posters/024-elbow-curl-bilateral.png",
+      "bytes": 162845,
+      "sha256": "e6deda77c002c4df49c3f02aa38afa71ff848f12d5c37b273530d15c0ef65e4e"
+    },
+    {
+      "path": "app/assets/fullbody/posters/025-elbow-overhead-left.png",
+      "bytes": 154759,
+      "sha256": "079c3737b63eb75debc6ab9822b4a22d756f56f760922f6eb7b7a1642e6cd3c8"
+    },
+    {
+      "path": "app/assets/fullbody/posters/026-elbow-overhead-right.png",
+      "bytes": 171140,
+      "sha256": "2462cd7b84c741d24e440817ca2f2622399ca34776eab381c94e098a6bcf936a"
+    },
+    {
+      "path": "app/assets/fullbody/posters/027-elbow-overhead-bilateral.png",
+      "bytes": 152793,
+      "sha256": "ec608fac776eb2605b8d4799b14f84cb5b0df73d5629d6387cda5e4cdd17bedd"
+    },
+    {
+      "path": "app/assets/fullbody/posters/028-forearm-turn-left.png",
+      "bytes": 161319,
+      "sha256": "dea48fca320208c7a2884c298a2a9cccfe87f23952bf59a6f7b35f604a92a958"
+    },
+    {
+      "path": "app/assets/fullbody/posters/029-forearm-turn-right.png",
+      "bytes": 164608,
+      "sha256": "4e8542c516cd98a03d9083d88ce41967ca338549d6e503367da485b6dadbafb4"
+    },
+    {
+      "path": "app/assets/fullbody/posters/030-forearm-turn-bilateral.png",
+      "bytes": 160358,
+      "sha256": "51cc98ec2f2f48c557c67f93a8079be8796892a2e19087db1adc24f3458e5c4c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/031-wrist-flex-left.png",
+      "bytes": 167193,
+      "sha256": "c8bc78dbfee541e7ee87e5ccd277ed920920e85260f84b2f21b3958d1280e329"
+    },
+    {
+      "path": "app/assets/fullbody/posters/032-wrist-flex-right.png",
+      "bytes": 163861,
+      "sha256": "ff1f28632acf1e33069d024de150de4d0b03143f807da68a9aa0f0668acc7279"
+    },
+    {
+      "path": "app/assets/fullbody/posters/033-wrist-flex-bilateral.png",
+      "bytes": 182443,
+      "sha256": "bbe16f12b1ccd816a70406f0c6efdcaa60c9ce3bc50c9c4ed84fd5e4add9a616"
+    },
+    {
+      "path": "app/assets/fullbody/posters/034-wrist-extend-left.png",
+      "bytes": 162794,
+      "sha256": "9588527ebd4523134a0f298542907f9759acf7928b122cb930659afff3151a2c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/035-wrist-extend-right.png",
+      "bytes": 179647,
+      "sha256": "07672ebcfe5019f072b062a3145d9d73bf98a850a1a134380e6341d6f3088adc"
+    },
+    {
+      "path": "app/assets/fullbody/posters/036-wrist-extend-bilateral.png",
+      "bytes": 162305,
+      "sha256": "f2cd83a23eba53ab4ce2cf3cd8b69adbf3ac5aad0d83c9f1960c40f42d0f126c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/037-fingers-left.png",
+      "bytes": 191702,
+      "sha256": "a6b634cb1956a96cc14ea129931e454fa33d9fbfc21020c037051f8e2d3a6596"
+    },
+    {
+      "path": "app/assets/fullbody/posters/038-fingers-right.png",
+      "bytes": 164994,
+      "sha256": "3c8ed876b55586b5eb4837a8e5ac7cd1b80cd6b34b482875d9ccf20b337f6b78"
+    },
+    {
+      "path": "app/assets/fullbody/posters/039-fingers-bilateral.png",
+      "bytes": 155513,
+      "sha256": "bd2259d2864c58c11c91f83e29d1f3bf3f68f2a53891032ed249596366715a06"
+    },
+    {
+      "path": "app/assets/fullbody/posters/040-wrist-circle-left.png",
+      "bytes": 161732,
+      "sha256": "177ae796cc467acb3c0fd964f609ff0158fc8c32aa8c4da6512e3401506db5cb"
+    },
+    {
+      "path": "app/assets/fullbody/posters/041-wrist-circle-right.png",
+      "bytes": 190845,
+      "sha256": "1178c688a2fc6cfaf00f9358013dcf0320bc0daacd92e6b4f70fa0db044e162f"
+    },
+    {
+      "path": "app/assets/fullbody/posters/042-wrist-circle-bilateral.png",
+      "bytes": 163318,
+      "sha256": "e6a3618f0e6a2726b43ac7f2c83c18e6374fac89b362674b9cf45cf9aec4ee84"
+    },
+    {
+      "path": "app/assets/fullbody/posters/043-standing-side-bend-left.png",
+      "bytes": 169518,
+      "sha256": "eedda4aa7e440f987325b2169d0695362e741c38dbb50e25f18cb74357db12fa"
+    },
+    {
+      "path": "app/assets/fullbody/posters/044-standing-side-bend-right.png",
+      "bytes": 165722,
+      "sha256": "2c2a7e97ce162c23dcd35f75155ccf1b331d2dd1ef6afe3c5cb168280f890096"
+    },
+    {
+      "path": "app/assets/fullbody/posters/045-standing-side-bend-bilateral.png",
+      "bytes": 184743,
+      "sha256": "da928bd7f58137109fc36b5f6933b9eb4e9093165133ff12e37aaca5fbcae9b6"
+    },
+    {
+      "path": "app/assets/fullbody/posters/046-neck-side-left.png",
+      "bytes": 167838,
+      "sha256": "c64b60df357c26536989b0fa7adf87a40962618139a57f722ef8ba667c3f6994"
+    },
+    {
+      "path": "app/assets/fullbody/posters/047-neck-side-right.png",
+      "bytes": 162629,
+      "sha256": "2c3f0e757efbe100a76fa06053db81e149214a3d7249efb244f56a78874d101d"
+    },
+    {
+      "path": "app/assets/fullbody/posters/048-neck-side-bilateral.png",
+      "bytes": 169876,
+      "sha256": "8e93c0e85e3db4df6058e253ca6f9899a1c8277cabd0042246c20f5be8525d01"
+    },
+    {
+      "path": "app/assets/fullbody/posters/049-neck-turn-left.png",
+      "bytes": 188329,
+      "sha256": "596807532ce693a48c661dfe81a678e63f3ef4e1eb35016a46aa61ef9c29ee72"
+    },
+    {
+      "path": "app/assets/fullbody/posters/050-neck-turn-right.png",
+      "bytes": 165783,
+      "sha256": "bbdfa6d72c8ed7eda54018c697b3457be599561d7a4912b6acd32b738e0b1d13"
+    },
+    {
+      "path": "app/assets/fullbody/posters/051-neck-turn-bilateral.png",
+      "bytes": 168285,
+      "sha256": "c60f46377babc9d6626409f4d819dc1d916a464a145e5be694265d64a6249cef"
+    },
+    {
+      "path": "app/assets/fullbody/posters/052-hip-abduction-left.png",
+      "bytes": 177241,
+      "sha256": "269a1089583b382520efbaee5879a0a927c1802921f4dfeacb5761b1f724c84a"
+    },
+    {
+      "path": "app/assets/fullbody/posters/053-hip-abduction-right.png",
+      "bytes": 167710,
+      "sha256": "4fcc1421affc4294a11df0bcf82b5733e0ca4131e7ad27153bfa58602d2a42dc"
+    },
+    {
+      "path": "app/assets/fullbody/posters/054-hip-abduction-bilateral.png",
+      "bytes": 177079,
+      "sha256": "b40083e124a68cc70c8678ccd2d1d97a1301f4acd49b9d264bf04458de77d7c9"
+    },
+    {
+      "path": "app/assets/fullbody/posters/055-hip-flexion-left.png",
+      "bytes": 163654,
+      "sha256": "c48836ee5496aa9701a22122431e1ddf22bb77797e0c16ae159e0781e833d858"
+    },
+    {
+      "path": "app/assets/fullbody/posters/056-hip-flexion-right.png",
+      "bytes": 162566,
+      "sha256": "8ef8934e71e0bcf1b69fd9d3e7257124dedcea4f78de934a1f457c835fff3581"
+    },
+    {
+      "path": "app/assets/fullbody/posters/057-hip-flexion-bilateral.png",
+      "bytes": 146669,
+      "sha256": "b903478428d375081bc482e9aab562774f6b4a3d1c4901b216a1b9d4ef0caa90"
+    },
+    {
+      "path": "app/assets/fullbody/posters/058-hip-extension-left.png",
+      "bytes": 197863,
+      "sha256": "ed81ae68d27c9db658cbd069a087951d1109d82b98d7fabed5a6502169ad9cd6"
+    },
+    {
+      "path": "app/assets/fullbody/posters/059-hip-extension-right.png",
+      "bytes": 168595,
+      "sha256": "0e8ee9468e74f268690132e826033b52262b0d69af15880c405317a73aa5b582"
+    },
+    {
+      "path": "app/assets/fullbody/posters/060-hip-extension-bilateral.png",
+      "bytes": 164244,
+      "sha256": "2d72077525086cf687017f503a2be5562829dc6fecfdcffe7ab6f35c7e9807b0"
+    },
+    {
+      "path": "app/assets/fullbody/posters/061-hamstring-curl-left.png",
+      "bytes": 150745,
+      "sha256": "109bc6dfd40c10d849a2c0025891a88f58274ec2b825cd443ad29473b74b6116"
+    },
+    {
+      "path": "app/assets/fullbody/posters/062-hamstring-curl-right.png",
+      "bytes": 203481,
+      "sha256": "4d211669a0c133687e980a7be7564d01e354a94933efaeee19ea1b5c0dc7f30c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/064-seated-knee-left.png",
+      "bytes": 197497,
+      "sha256": "1cfea9de3935da1f4e334a47bbd673dda24a4d89bd6da9f746937e5962406a15"
+    },
+    {
+      "path": "app/assets/fullbody/posters/065-seated-knee-right.png",
+      "bytes": 214912,
+      "sha256": "a825952001b77290994524414a68a94879f9d5242849dc31269fe3fdb7f3f0b4"
+    },
+    {
+      "path": "app/assets/fullbody/posters/066-seated-knee-bilateral.png",
+      "bytes": 222476,
+      "sha256": "f5978b36a7c587565f4ec7f326cc0f2c56d34a6e6d76de3d4bf1f2a056d1bb1b"
+    },
+    {
+      "path": "app/assets/fullbody/posters/067-seated-march-left.png",
+      "bytes": 218875,
+      "sha256": "7f2f416142684b88b02ea89b86fe1c7eab29f8ac51a4add59bdb91b1739dbe96"
+    },
+    {
+      "path": "app/assets/fullbody/posters/068-seated-march-right.png",
+      "bytes": 186875,
+      "sha256": "5cce55f834c119eae293bb2c2199915324fd5dfca9b99e82002894bef3a2fee9"
+    },
+    {
+      "path": "app/assets/fullbody/posters/069-seated-march-bilateral.png",
+      "bytes": 205074,
+      "sha256": "b487c0ad82d3247491889cbe8f8f072eff9545c93de0900d42533915c056b397"
+    },
+    {
+      "path": "app/assets/fullbody/posters/070-standing-heels-left.png",
+      "bytes": 166689,
+      "sha256": "0481421540dcc5c1da40058033dc92df7bf1839aa63cba3fff5cf6f2dc01a771"
+    },
+    {
+      "path": "app/assets/fullbody/posters/071-standing-heels-right.png",
+      "bytes": 178219,
+      "sha256": "a07174d7c15bc723ec04298a1ffc07a0eca8bc89fd0fff95f9e130d42b64306e"
+    },
+    {
+      "path": "app/assets/fullbody/posters/072-standing-heels-bilateral.png",
+      "bytes": 162502,
+      "sha256": "e7021f82104994174db5759851927ee222384523a3727c07575e6d72e19b56ba"
+    },
+    {
+      "path": "app/assets/fullbody/posters/073-standing-toes-left.png",
+      "bytes": 161921,
+      "sha256": "1723221042b6bcafb8285024c5d584ab441d09dbab7aecb5f515cb01cd43ce75"
+    },
+    {
+      "path": "app/assets/fullbody/posters/074-standing-toes-right.png",
+      "bytes": 169337,
+      "sha256": "db6cdc810a73df3574f8307f21424489a2cd99bd7ff5b8a7eaeabe1874fb13f2"
+    },
+    {
+      "path": "app/assets/fullbody/posters/075-standing-toes-bilateral.png",
+      "bytes": 168902,
+      "sha256": "ba0ad3ac97c22d683c75efc6a541425cfad541c94321456faa45afde0a59f4ed"
+    },
+    {
+      "path": "app/assets/fullbody/posters/076-ankle-circle-left.png",
+      "bytes": 185993,
+      "sha256": "4092c3eab5dbc1953735c11e007032b218da8a11d929f11b98a45850816ea180"
+    },
+    {
+      "path": "app/assets/fullbody/posters/077-ankle-circle-right.png",
+      "bytes": 199664,
+      "sha256": "e4ada68932cdb82b6c59f61d9d9a0623976bfd80988409d3772e9d69d148c324"
+    },
+    {
+      "path": "app/assets/fullbody/posters/078-ankle-circle-bilateral.png",
+      "bytes": 193318,
+      "sha256": "4e8832231d6ecff1a10e50386c42d17344f0ec5b7621ace07bd47166a77c671c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/079-seated-heels-left.png",
+      "bytes": 183593,
+      "sha256": "eaf902ea6dee57b18615bb0e1b6701c658c496aa01c0b3153a1210f9717db67d"
+    },
+    {
+      "path": "app/assets/fullbody/posters/080-seated-heels-right.png",
+      "bytes": 194379,
+      "sha256": "a98e73e54fe6305a7e96c68e166cdc5c28ac879db289c79485a3243023ce1287"
+    },
+    {
+      "path": "app/assets/fullbody/posters/081-seated-heels-bilateral.png",
+      "bytes": 190355,
+      "sha256": "39dc767fcae2cc5c50b3fe51edf0362466624a813e9e91d76cf45cdd73ba0f83"
+    },
+    {
+      "path": "app/assets/fullbody/posters/082-seated-toes-left.png",
+      "bytes": 209898,
+      "sha256": "4bcdb531628a504fc3a22f0ea0a46ce6f9ca4e969816679ba649f4756ed923e0"
+    },
+    {
+      "path": "app/assets/fullbody/posters/083-seated-toes-right.png",
+      "bytes": 203139,
+      "sha256": "6a631c060ed6f96fb72c8f3e2c1d04d463231f45517036d5d687d911426ad145"
+    },
+    {
+      "path": "app/assets/fullbody/posters/084-seated-toes-bilateral.png",
+      "bytes": 191548,
+      "sha256": "7a9e0d7c6e88c3309a5a6598137b26e72741c1ba2fd5ced1d49c54e437adad76"
+    },
+    {
+      "path": "app/assets/fullbody/posters/085-seated-side-bend-left.png",
+      "bytes": 191584,
+      "sha256": "5875566fb955d6706f0ce89a82785312b34600d9fbd0afc36ec9941e466ce5bc"
+    },
+    {
+      "path": "app/assets/fullbody/posters/086-seated-side-bend-right.png",
+      "bytes": 203395,
+      "sha256": "48b66cecd1fbc5fe8e9580f45a6a534ce4e59f3c490ffb627bbbe0a73b543b1c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/087-seated-side-bend-bilateral.png",
+      "bytes": 199619,
+      "sha256": "19bb25a55a0bced9bddc46ee99f2487ad58329c3d0bf46283a44735dae7d8e5e"
+    },
+    {
+      "path": "app/assets/fullbody/posters/088-seated-overhead-left.png",
+      "bytes": 177111,
+      "sha256": "aa008f1707ab7596c668d60c6da0b24eee5e30a5d383f472a7d5555fb52701f7"
+    },
+    {
+      "path": "app/assets/fullbody/posters/089-seated-overhead-right.png",
+      "bytes": 182280,
+      "sha256": "87918f5863a5f1363038473e0b2d8dd53b7ca9b9c28c8b746eac2793d82d3968"
+    },
+    {
+      "path": "app/assets/fullbody/posters/090-seated-overhead-bilateral.png",
+      "bytes": 175123,
+      "sha256": "cbd9f187862f3f2e8515c620c0342682e4023c5e32053b5e0f70abfdc7e352a5"
+    },
+    {
+      "path": "app/assets/fullbody/posters/091-scapula-row-left.png",
+      "bytes": 159068,
+      "sha256": "fbb89ec5f3ae10227b145c685138de78086c7a9b72bec1a0db45121b05a6b2dc"
+    },
+    {
+      "path": "app/assets/fullbody/posters/092-scapula-row-right.png",
+      "bytes": 162146,
+      "sha256": "06885b196635f7c99bfec828a3c59730c8b6264588ad5120f8cc10c21dd6c14e"
+    },
+    {
+      "path": "app/assets/fullbody/posters/093-scapula-row-bilateral.png",
+      "bytes": 164788,
+      "sha256": "0b222f94c917c6e7ffae91435205598c5ff829a93660b754876c91bbf2b279e4"
+    },
+    {
+      "path": "app/assets/fullbody/posters/094-forward-toe-tap-left.png",
+      "bytes": 167648,
+      "sha256": "c5f3d219746fa8a6778c8b5cf6b9258a6c1b7e99081e7ddff07eedd47c8adab3"
+    },
+    {
+      "path": "app/assets/fullbody/posters/095-forward-toe-tap-right.png",
+      "bytes": 192534,
+      "sha256": "6360521cedf9d3e85a629eaf2d9202052ba3822796265f58f44d81e06a7396ec"
+    },
+    {
+      "path": "app/assets/fullbody/posters/096-forward-toe-tap-bilateral.png",
+      "bytes": 157783,
+      "sha256": "7ddde6e82fb3195efc97fec39c1c665ebf25ebf1c8c3ea63675d72cc8d8cbc2d"
+    },
+    {
+      "path": "app/assets/fullbody/posters/097-side-toe-tap-left.png",
+      "bytes": 209245,
+      "sha256": "876fbe6cbf49bcdbbc340e8b501eb550fb4974223a7be0d1c30769b97adaf62c"
+    },
+    {
+      "path": "app/assets/fullbody/posters/098-side-toe-tap-right.png",
+      "bytes": 171102,
+      "sha256": "738be4b368f6ba02ad4e9692e88e80066417f8533fd49834697b4b92a5f0dcae"
+    },
+    {
+      "path": "app/assets/fullbody/posters/099-side-toe-tap-bilateral.png",
+      "bytes": 176823,
+      "sha256": "05003b3e8a2bc5f3b0c42251018b969ae491c5385a1f727126e6180c3de9057f"
+    },
+    {
+      "path": "app/assets/fullbody/posters/100-back-toe-tap-left.png",
+      "bytes": 156665,
+      "sha256": "ddbc8621723b232443af3be992b25c1c7417d4870e0d117620660833978b796f"
+    },
+    {
+      "path": "app/assets/fullbody/posters/101-back-toe-tap-right.png",
+      "bytes": 164731,
+      "sha256": "c2dae2d2d4a6a495b2ad8fe8d46b50805d500a118666b376446f3db1f3c07383"
+    },
+    {
+      "path": "app/assets/fullbody/posters/102-back-toe-tap-bilateral.png",
+      "bytes": 204045,
+      "sha256": "68ebca3d689493b0b71b34124183a5940359d6b1d913b16bc7f2a471521bb1ab"
+    },
+    {
+      "path": "app/assets/fullbody/posters/103-forward-heel-tap-left.png",
+      "bytes": 169711,
+      "sha256": "846036f80e023a0cb9f21c909f9d08780f72f0753ff2bf13bed2fa75f2ba3336"
+    },
+    {
+      "path": "app/assets/fullbody/posters/104-forward-heel-tap-right.png",
+      "bytes": 201764,
+      "sha256": "35d54e8a641c0f5f7d37762e384d4b8239e9c13103ba063495ea93f93375d38f"
+    },
+    {
+      "path": "app/assets/fullbody/posters/105-forward-heel-tap-bilateral.png",
+      "bytes": 173970,
+      "sha256": "eda3b315ed4c2a08543959f4c93b554a32ec7441cda01f38ae74e9185253b431"
+    },
+    {
+      "path": "app/assets/fullbody/posters/106-seated-leg-cross-left.png",
+      "bytes": 189229,
+      "sha256": "90f037251fa0ad9726e0927a3608a60d043096b4e2a8a69f80204c04d692b493"
+    },
+    {
+      "path": "app/assets/fullbody/posters/107-seated-leg-cross-right.png",
+      "bytes": 225719,
+      "sha256": "50006a181a5641fd59c7d18bdbd55ef35eb7fe34322b430b794a4da7789fc484"
+    },
+    {
+      "path": "app/assets/fullbody/posters/108-seated-leg-cross-bilateral.png",
+      "bytes": 189852,
+      "sha256": "021a958b666e54aab844dc09cf096c1e14e292f768397d696602d00023689677"
+    },
+    {
+      "path": "app/assets/fullbody/posters/109-pelvic-tilt.png",
+      "bytes": 180866,
+      "sha256": "90519d165010023f432f841636bdfae40055c514e1d7a40cf5b3a32154636b87"
+    },
+    {
+      "path": "app/assets/fullbody/posters/110-cat-cow.png",
+      "bytes": 199758,
+      "sha256": "cff767c66d9296a717653849b2ce43208598d2ac8ec7a1b87635d739f87ffe85"
+    },
+    {
+      "path": "app/assets/fullbody/posters/111-knee-rolls.png",
+      "bytes": 204668,
+      "sha256": "c27e6b2353131c93d023c1d817b60208b913cee182612e9755a8a49b3edacfbe"
+    },
+    {
+      "path": "app/assets/fullbody/posters/112-glute-bridge.png",
+      "bytes": 192476,
+      "sha256": "5cc85c8d41ce4db47f596a96b3d47a7aae50d89c1eb056043606a7d9f6f53980"
+    },
+    {
+      "path": "app/assets/fullbody/posters/113-bird-dog.png",
+      "bytes": 213111,
+      "sha256": "4f5dc9062bd3608b1d44e3318b9cf56384b67a9466491f9208cb9b54ee8cbd8b"
+    },
+    {
+      "path": "app/assets/icon-192.png",
+      "bytes": 9316,
+      "sha256": "2289a8bd9e32544202c93201fdd0d013299198911bab8b2bdb598d6b40a25d1c"
+    },
+    {
+      "path": "app/assets/icon-512.png",
+      "bytes": 24290,
+      "sha256": "1204c18a9dc5cc474213e796398ef13c7d0e497e0cde489a64c40887aee5b3ba"
+    },
+    {
+      "path": "app/assets/icon.svg",
+      "bytes": 343,
+      "sha256": "f1659ba62b45446a124508f15e43c0c97ddc52c80c01343a3b203f9c1743c437"
+    },
+    {
+      "path": "app/core.js",
+      "bytes": 3305,
+      "sha256": "a994ee3696b79c02de32e4b5cd281286bf1d131b6061c3653e5aa411a01f3f31"
+    },
+    {
+      "path": "app/data.js",
+      "bytes": 10511,
+      "sha256": "39bfbe1d687e6b588bbe58f63c3b65cf58a539662504b11a989bf6928b8265b5"
+    },
+    {
+      "path": "app/fullbody.js",
+      "bytes": 33505,
+      "sha256": "9ae9e67451986ed2d784a46e35256cb4639d7b098d0b9b962f3d2238940839e8"
+    },
+    {
+      "path": "app/index.html",
+      "bytes": 4556,
+      "sha256": "50602e1bb39d127d83f0b6326c0d4e157ec18298ab300a86ccddc9314ae78539"
+    },
+    {
+      "path": "app/manifest.webmanifest",
+      "bytes": 500,
+      "sha256": "d6a3c0e4d67cdd22da52b39d9f78a867101ae6e64ef88c5d0ddace29112fc859"
+    },
+    {
+      "path": "app/package.json",
+      "bytes": 561,
+      "sha256": "54c5a8ef12dc9a8a8e739e3959907a04c7ee80902d6ece1915c9d97e0457a47b"
+    },
+    {
+      "path": "app/scripts_generate_media.py",
+      "bytes": 9011,
+      "sha256": "75fa041de43e3be7a124253b5c30b9f498410f19e65a9b3471f699fa8eb999bf"
+    },
+    {
+      "path": "app/styles.css",
+      "bytes": 80190,
+      "sha256": "d9d3011c824cb8690e069ebbcb811139b576366ed20e0620f350983d23d13e5e"
+    },
+    {
+      "path": "app/sw.js",
+      "bytes": 2340,
+      "sha256": "ea8f9c50b66a660f2a01a7e81a4f30cd093806108a92c8c85a5e315f4544da91"
+    },
+    {
+      "path": "app/tests/agent.test.js",
+      "bytes": 13577,
+      "sha256": "8224162a3e8090498c09b15a5f202b0dc8fbb6429c5c1f9e76da9a2acab6c155"
+    },
+    {
+      "path": "app/tests/catalog.test.js",
+      "bytes": 1217,
+      "sha256": "c9c627c305ae06f5e50f69289bc7e0330ec5c6469ae29ac86d8e4f98bc22cffc"
+    },
+    {
+      "path": "app/tests/core.test.js",
+      "bytes": 1464,
+      "sha256": "5a1087d7ea273f824ff23387d60081bce58a540a5e45f6f089bd76979ec5e539"
+    },
+    {
+      "path": "app/tests/experience.test.js",
+      "bytes": 1995,
+      "sha256": "b321ffd0c9fc936ffdc795746820ae9c985ce98c9981174f12c8d13a114d84fc"
+    },
+    {
+      "path": "app/tests/fullbody.test.js",
+      "bytes": 2177,
+      "sha256": "89bfc4e84ef607dabb1ca83423afba1e14b070495de468fda969bfa8e67be136"
+    },
+    {
+      "path": "app/tests/grammar.test.js",
+      "bytes": 2679,
+      "sha256": "a6874489fe5cf597a77ab8fe09969d3e2c05748d1271cb5f69df9861d38b4268"
+    },
+    {
+      "path": "app/tests/media.test.js",
+      "bytes": 1133,
+      "sha256": "7695aa5854eb133ea3cda16e76edfd1dcad8b006a0b7c361f8528eb35cb055d7"
+    },
+    {
+      "path": "app/tests/update.test.js",
+      "bytes": 980,
+      "sha256": "330779b19edc9f44f7c14355b8d152f243f593b39e43c308869e9bce00c46fea"
+    }
+  ]
+}

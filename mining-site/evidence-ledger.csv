@@ -1,0 +1,7 @@
+id,claim,evidence,level,limit
+EV-001,Snapshot exacto 1.11,mk1/build/source-manifest.json,OBSERVED,No prueba eficacia clínica
+EV-002,Cantidad elegida antes de selección,app/agent-worker.js;app/agent-planner.js,OBSERVED,No certifica cantidad óptima
+EV-003,Cuatro/cinco e inferencia real previa,app/VERIFICATION.md,HISTORICAL,No nueva ejecución en esta importación
+EV-004,Suite reejecutada,mk1/test/import-checks.json,OBSERVED,Cobertura limitada a escenarios automatizados
+EV-005,MK0 reconstruido,mk0/README.md,GENERATED,No son entrevistas/gates históricos aprobados
+EV-006,Android/comercial,mk1/brainstorming/BACKLOG.md,PROPOSED,Sin GO de implementación ni mercado validado

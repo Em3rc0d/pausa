@@ -1,0 +1,12 @@
+{
+  "name": "pausa-repository",
+  "version": "1.11.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 -m http.server 4173 --directory app",
+    "test": "npm --prefix app test",
+    "check:repository": "node scripts/check-repository.mjs",
+    "check": "npm --prefix app run check && npm run check:repository"
+  }
+}

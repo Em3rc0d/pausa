@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="Pausa: rutinas de movimiento, movilidad lumbar y recordatorios para personas que trabajan muchas horas sentadas. Gratuita, privada y open source.">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css?v=1.11.0">
+  <title>Pausa — muévete mejor, trabaja mejor</title>
+</head>
+<body>
+  <a class="skip-link" href="#appContent">Saltar al contenido</a>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" data-nav="inicio" aria-label="Pausa, ir al inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M9 25.5C9 16 15 8 24 8c5 0 8 4 8 8 0 7-5 12-12 12-5 0-8-3-8-7s3-7 7-7" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><circle cx="30" cy="29" r="4" fill="currentColor"/></svg></span><span>Pausa<span class="brand-dot">.</span></span></a>
+      <div class="sidebar-label">TU ESPACIO</div>
+      <nav class="side-nav" id="sideNav">
+        <button class="nav-item active" data-nav="inicio" type="button"><span class="ico" data-icon="home"></span>Inicio</button>
+        <button class="nav-item" data-nav="agente" type="button"><span class="ico" data-icon="spark"></span>Mi guía</button>
+        <button class="nav-item" data-nav="rutinas" type="button"><span class="ico" data-icon="activity"></span>Mis rutinas</button>
+        <button class="nav-item" data-nav="biblioteca" type="button"><span class="ico" data-icon="book"></span>Biblioteca <span class="nav-count">112</span></button>
+        <button class="nav-item" data-nav="actividad" type="button"><span class="ico" data-icon="chart"></span>Mi actividad</button>
+        <button class="nav-item" data-nav="ajustes" type="button"><span class="ico" data-icon="settings"></span>Preferencias</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-tiny-card"><span class="tiny-emoji">✳</span><strong>Menos prisa.<br>Más movimiento.</strong><p>Unos minutos para volver a ti.</p></div>
+      <div class="sidebar-footer"><span class="dot-live"></span> Privado · v1.11.0</div>
+    </aside>
+    <div class="app-main">
+      <header class="topbar"><a class="mobile-brand" href="#inicio" data-nav="inicio">Pausa<span>.</span></a><div class="breadcrumbs"><span>MI ESPACIO</span><span class="slash">/</span><span id="breadcrumbCurrent">Inicio</span></div><div class="topbar-right"><span class="topbar-private"><span class="ico" data-icon="lock"></span> Solo en tu dispositivo</span><span class="today-date" id="todayDate"></span><span class="avatar" title="Tus datos se guardan en este dispositivo">P</span></div></header>
+      <main id="appContent" class="content" tabindex="-1"></main>
+      <footer class="page-footer"><span>Hecho para cuidarte, no para exigirte.</span><span>Una herramienta de bienestar, no un diagnóstico médico.</span></footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Navegación móvil" id="mobileNav">
+    <button class="mobile-nav-item active" data-nav="inicio"><span class="ico" data-icon="home"></span>Inicio</button>
+    <button class="mobile-nav-item" data-nav="agente"><span class="ico" data-icon="spark"></span>Mi guía</button>
+    <button class="mobile-nav-item" data-nav="rutinas"><span class="ico" data-icon="activity"></span>Rutinas</button>
+    <button class="mobile-nav-item" data-nav="biblioteca"><span class="ico" data-icon="book"></span>Ejercicios</button>
+    <button class="mobile-nav-item" data-nav="actividad"><span class="ico" data-icon="chart"></span>Actividad</button>
+    <button class="mobile-nav-item" data-nav="ajustes"><span class="ico" data-icon="settings"></span>Ajustes</button>
+  </nav>
+  <div id="modalRoot" class="modal-root" aria-live="polite"></div>
+  <div id="toastRoot" class="toast-root" role="status" aria-live="polite"></div>
+  <script src="fullbody.js?v=1.11.0"></script>
+  <script src="data.js?v=1.11.0"></script>
+  <script src="core.js?v=1.11.0"></script>
+  <script src="agent-core.js?v=1.11.0"></script>
+  <script src="agent-planner.js?v=1.11.0"></script>
+  <script src="app.js?v=1.11.0"></script>
+  <script src="agent-ui.js?v=1.11.0"></script>
+</body>
+</html>

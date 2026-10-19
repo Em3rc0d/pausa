@@ -1,0 +1,17 @@
+id,source,locator,use,evidence_status
+SRC-001,Transformers.js 3.8.1,https://huggingface.co/docs/transformers.js/v3.8.1/guides/dtypes,runtime/dtypes,Referencia histórica del proyecto; no revalidada web en esta importación
+SRC-002,Qwen2.5-0.5B-Instruct,https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct,modelo base,Referencia histórica; no equivale a recomendador clínico
+SRC-003,ONNX Qwen modelo fijado,https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/tree/cc5cc01a65cc3ff17bdb73a7de33d879f62599b0,artefacto de inferencia,Revisión observada en código importado
+SRC-004,Transformers logits processors,https://huggingface.co/docs/transformers.js/api/generation/logits_process,gramáticas,Referencia técnica histórica
+SRC-005,NHS sitting exercises,https://www.nhs.uk/live-well/exercise/sitting-exercises/,referencias generales sentado,No valida ilustraciones ni indicación individual
+SRC-006,NHS flexibility,https://www.nhs.uk/live-well/exercise/flexibility-exercises/,movilidad general,No valida variantes de GIF
+SRC-007,NHS back pain,https://www.nhs.uk/conditions/back-pain/,alcance/alertas en documentos previos,Referencia histórica; no revisión clínica de Pausa
+SRC-008,Guys and St Thomas low back,https://www.guysandstthomas.nhs.uk/health-information/low-back-pain/physiotherapy-and-exercises,referencia enlazada de catálogo,No valida dosis o selección de Pausa
+SRC-009,Frimley hand exercises,https://www.fhft.nhs.uk/patients-and-visitors/patient-information-library/hand-exercises-advice-sheet,referencia enlazada manos,Referencia histórica; disponibilidad actual no revalidada
+SRC-010,Laws of UX español,https://lawsofux.com/es/,marco preferido de diseño,Referencia metodológica; no auditoría ejecutada
+SRC-011,wger,https://github.com/wger-project/wger,referencia de producto declarada,Sin código ni medios importados de este upstream
+SRC-012,openGym,https://github.com/DuarteSantos8/openGym,referencia de estructura declarada,Sin código ni medios importados de este upstream
+SRC-013,free-exercise-db,https://github.com/yuhonas/free-exercise-db,referencia de catálogo declarada,No se redistribuyen sus imágenes
+SRC-014,Medios suministrados,../app/assets/fullbody/LICENSE-MEDIA.txt,licencia/procedencia declarada,Declaración del paquete; revisión clínica pendiente
+SRC-015,Snapshot v1.11.0,../mk1/build/source-manifest.json,evidencia primaria de importación,Hashes y estructura observados
+SRC-016,Verificación histórica,../app/VERIFICATION.md,pruebas navegador/modelo previas,Histórico 18-10-2026; no reejecución actual de navegador

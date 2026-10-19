@@ -1,0 +1,32 @@
+{
+  "kind": "current-local-import-check",
+  "started_at_utc": "2026-10-19T18:06:33.080208+00:00",
+  "command": "npm --prefix app run check",
+  "node": "v24.19.0",
+  "python": "Python 3.12.14",
+  "exit_code": 0,
+  "counts": {
+    "tests": 46,
+    "pass": 46,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "stdout": "\n> pausa-pwa@1.11.0 check\n> node --check agent-planner.js && node --check agent-core.js && node --check agent-ui.js && node --check agent-worker.js && node --check data.js && node --check core.js && node --check app.js && node --check sw.js && node --check fullbody.js && node --test tests/*.test.js\n\n✔ el filtro solo prepara candidatos; nunca presenta una rutina sin inferencia (6.068979ms)\n✔ el compositor conserva exactamente los IDs y el orden elegidos por el modelo (3.537033ms)\n✔ propuestas inventadas, duplicadas, truncadas o familias redundantes se rechazan enteras (0.747463ms)\n✔ cansancio 6–7 y hasta 10 no se confunde con dolor ni bloquea la composición (10.486337ms)\n✔ el ejemplo lumbar literal crea candidatos sentados sin bloquear «me duele» ni exigir un modal (1.767015ms)\n✔ descripciones habituales de dolor y negativas permiten rutinas generales, sin afirmar tratamiento (1.276795ms)\n✔ alarmas explícitas, lesiones y síntomas neurológicos conservan prioridad sobre la rutina (0.844485ms)\n✔ puntuaciones antiguas no se reinterpretan como cansancio y los datos inválidos requieren aclaración (0.296314ms)\n✔ todas las zonas y posiciones solo ofrecen candidatos relevantes y respetan exclusiones (4.299599ms)\n✔ texto genérico produce una rutina general identificada y la zona específica seleccionada prevalece (1.286385ms)\n✔ el modelo no puede perder una zona de una petición múltiple (0.545507ms)\n✔ una pausa general requiere diversidad real, no tres variantes de la misma zona (0.880823ms)\n✔ descartes y medios inexistentes desaparecen antes del prompt; no vuelven por inferencia (0.465745ms)\n✔ otra combinación rechaza la misma selección y conserva las restricciones (0.363866ms)\n✔ contexto libre se envía como datos delimitados y no como instrucciones del sistema (0.402644ms)\n✔ exclusiones textuales no se convierten en objetivos y se conservan en cada candidato (0.460182ms)\n✔ la cobertura múltiple no queda limitada por tres salvo en modalidad ágil (44.406872ms)\n✔ lumbar conserva cobertura directa y complementos opcionales con su región real (0.535293ms)\n✔ la cantidad variable no levanta exclusiones ni inventa cobertura (0.59527ms)\n✔ el modelo puede elegir uno, dos, tres o cuatro patrones sin obligación de llenar puestos (1.316104ms)\n✔ hasta tres es un límite exclusivo de Pausa ágil y no una elección obligatoria (0.484626ms)\n✔ la selección debe respetar la cantidad elegida por el modelo en la etapa de planificación (0.998535ms)\n✔ cada rutina contiene ejercicios existentes con instrucciones (1.794583ms)\n✔ las rutinas de escritorio no requieren colchoneta (0.285393ms)\n✔ el catálogo inicial es original y no usa media externa (0.281043ms)\n✔ duraciones y reloj están normalizados (0.913688ms)\n✔ normaliza datos corruptos y frecuencias no permitidas (0.728605ms)\n✔ agrupa movimientos por fecha local (31.563196ms)\n✔ rachas continuas consideran ayer si hoy aún no hay actividad (0.771024ms)\n✔ restaura una sesión de forma pausada (0.31757ms)\n✔ la interfaz compone con inferencia real y nunca llama al clasificador anterior (2.044769ms)\n✔ composición cancelable, errores explícitos y respeto al ahorro de datos (0.53834ms)\n✔ versión y worker generativo coinciden con los recursos de la PWA (0.519731ms)\n✔ la guía identifica la escala como cansancio/rigidez y no ofrece un bloqueo numérico por dolor (0.573334ms)\n✔ el aviso aparece antes del formulario y crear no impone un cuestionario adicional (0.746306ms)\n✔ Los 112 GIF y 112 PNG están completos e íntegros (252.115117ms)\n✔ La biblioteca completa llega al HTML de la PWA y sus medios son locales (2.67543ms)\n✔ decodificación variable permite cerrar o continuar, incluidos cuatro movimientos reales (8.391076ms)\n✔ prefijos numéricos y cierres no permiten IDs inexistentes ni propuestas incompletas (34.934358ms)\n✔ la gramática impide una selección repetida cuando se pide otra combinación (1.890449ms)\n✔ la decisión de cantidad precede la selección y su gramática solo permite números viables (2.585417ms)\n✔ Cada ejercicio cuenta con PNG y GIF originales locales (8.802101ms)\n✔ Animaciones se precargan para funcionamiento sin conexión (0.485629ms)\n✔ El usuario puede detener las animaciones (0.510972ms)\n✔ coherencia de versión en interfaz y archivos (2.527248ms)\n✔ el nuevo service worker no utiliza cache-first para código ni páginas (0.630252ms)\nℹ tests 46\nℹ suites 0\nℹ pass 46\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 377.253433\n",
+  "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n",
+  "browser_inference_rerun": false,
+  "historical_browser_evidence": "app/VERIFICATION.md",
+  "repository_check": {
+    "command": "node scripts/check-repository.mjs",
+    "exit_code": 0,
+    "summary": {
+      "status": "passed",
+      "snapshotFiles": 293,
+      "documents": 35,
+      "localLinks": 88,
+      "gifs": 112,
+      "posters": 112,
+      "version": "1.11.0"
+    }
+  }
+}

@@ -13,3 +13,7 @@ No se ha implementado un sistema de pago, backend, clínica, telemetría remota 
 ## Corrección media HQ tras prueba manual
 
 El usuario detectó en el RC que Pausa sentado mostraba imágenes legadas. El catálogo de 112 contiene animaciones HQ de movimientos sentados, pero no equivalentes exactos para el giro torácico y la movilidad pélvica en silla. Por tanto **no se reasignan GIF incorrectos a las instrucciones anteriores**: Pausa sentado usa tres movimientos explícitos compatibles con los recursos HQ reales, con títulos e instrucciones actualizados. app.js centraliza la resolución de media (tarjeta, diálogo, sesión y toggle); sw.js precarga sus seis recursos para uso offline. No se reescriben ni regeneran medios originales.
+
+## Ajuste de exactitud del historial tras QA manual (2026-10-19)
+
+Una captura del usuario, confirmada sobre el commit d411187, demostró que una sesión de 145 segundos figuraba como «2 min» en el resumen y «3 min» en la actividad. El origen era Math.round en sumMinutes frente a Math.ceil en duration. La UI de actividad y el modal de finalización muestran ahora el **tiempo realmente registrado** (minutos y segundos), sin mutar los logs originales; la duración de rutina planificada sigue siendo aproximada. El gráfico semanal utiliza segundos exactos y conserva el valor antiguo minutes para compatibilidad. Se ajustó también el singular «1 sesión completada»/«1 día» y se añadieron pruebas de regresión.

@@ -39,3 +39,12 @@ test('la pantalla, el toggle y el offline reutilizan el mismo recurso HQ de la r
  }
  assert.match(sw,/cache\.match\(req\)\|\|await caches\.match\(req\)/);
 });
+
+test('el historial muestra segundos exactos, barras precisas y concordancia singular/plural',()=>{
+ const app=read('app.js');
+ assert.match(app,/recorded=Core\.elapsedParts\(Core\.sumSeconds\(state\.logs\)\)/);
+ assert.match(app,/Core\.formatElapsed\(l\.seconds\)/);
+ assert.match(app,/day\.seconds\/max\*100/);
+ assert.match(app,/count===1\?'Sesión completada':'Sesiones completadas'/);
+ assert.match(app,/t\.streak===1\?'día':'días'/);
+});

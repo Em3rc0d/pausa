@@ -11,3 +11,5 @@
 **Comercial:** pago real confirmado, beneficio/entrega, reembolso, política fiscal y soporte no existen todavía. NO GO comercial.
 
 **Regresión visual HQ pendiente de validación manual:** Pausa sentado debe mostrar una persona sentada en sus tres movimientos HQ y sus GIF deben corresponder a alcance de brazos, elevación de talones e inclinación lateral, tanto en tarjeta como en sesión. Se añadieron tests de mapeo del catálogo, archivos locales y precarga. La verificación de hashes de todos los archivos multimedia sigue bajo npm run check.
+
+**QA manual de usuario recibida (2026-10-19, commit d411187):** una captura de «Mi actividad» prueba que una sesión «Pausa sentado» se guardó localmente, con 1 sesión y racha de 1 día. Se detectaron inconsistencias visibles de redondeo (2 min versus 3 min) y plural. El parche de exactitud se aplica después de aquella evidencia; su suite y visual deben repetirse y no se declaran aprobadas anticipadamente. Esta captura no demuestra todavía que los tres GIF HQ se hayan comprobado dentro de la sesión.

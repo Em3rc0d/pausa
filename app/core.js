@@ -34,14 +34,24 @@
   return base;
  }
  function dayLogs(logs,key){return logs.filter(l=>dateKey(l.at)===key)}
- function sumMinutes(logs){return Math.round(logs.reduce((n,l)=>n+l.seconds,0)/60)}
+ function sumSeconds(logs){return logs.reduce((n,l)=>n+Math.max(0,Math.floor(Number(l.seconds)||0)),0)}
+ function sumMinutes(logs){return Math.round(sumSeconds(logs)/60)}
+ function elapsedParts(seconds){
+  const s=Math.max(0,Math.floor(Number(seconds)||0));
+  if(s===0)return {value:0,unit:'min'};
+  if(s>=3600){const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),rest=s%60;return {value:h,unit:'h'+(m?' '+m+' min':'')+(rest?' '+rest+' s':'')}}
+  if(s>=60)return {value:Math.floor(s/60),unit:'min'+(s%60?' '+(s%60)+' s':'')};
+  return {value:s,unit:'s'};
+ }
+ function formatElapsed(seconds){const {value,unit}=elapsedParts(seconds);return value+' '+unit;}
+
  function streak(logs,now=Date.now()){
   const days=new Set(logs.map(l=>dateKey(l.at)));const today=dateKey(now);let d=new Date(now);d.setHours(12,0,0,0);if(!days.has(today))d.setDate(d.getDate()-1);
   let count=0;while(count<1000&&days.has(dateKey(d.getTime()))){count++;d.setDate(d.getDate()-1)}return count;
  }
  function week(logs,now=Date.now()){
   const dates=[];const today=new Date(now);today.setHours(12,0,0,0);
-  for(let i=6;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const key=dateKey(d.getTime());dates.push({key,minutes:sumMinutes(dayLogs(logs,key)),label:new Intl.DateTimeFormat('es',{weekday:'short'}).format(d).replace('.','')});}return dates;
+  for(let i=6;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const key=dateKey(d.getTime());const seconds=sumSeconds(dayLogs(logs,key));dates.push({key,seconds,minutes:Math.round(seconds/60),label:new Intl.DateTimeFormat('es',{weekday:'short'}).format(d).replace('.','')});}return dates;
  }
- return {VALID_INTERVALS,dateKey,minutes,formatClock,fromMinutes,normalize,nextAllowedReminder,dayLogs,sumMinutes,streak,week};
+ return {VALID_INTERVALS,dateKey,minutes,formatClock,fromMinutes,normalize,nextAllowedReminder,dayLogs,sumSeconds,sumMinutes,elapsedParts,formatElapsed,streak,week};
 });

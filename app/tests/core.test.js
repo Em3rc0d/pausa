@@ -16,3 +16,16 @@ test('la agenda evita el domingo y abre el lunes a las 09:00',()=>{
  const d=new Date(C.nextAllowedReminder(new Date(2026,9,18,11).getTime(),r));
  assert.equal(d.getDay(),1);assert.equal(d.getHours(),9);assert.equal(d.getMinutes(),0);
 });
+
+test('el tiempo transcurrido se presenta exactamente y no se redondea contradictoriamente',()=>{
+ const ts=new Date(2026,9,19,12).getTime();
+ const logs=[{id:'uno',at:ts,name:'Pausa sentado',seconds:145}];
+ assert.equal(C.sumSeconds(logs),145);
+ assert.deepEqual(C.elapsedParts(145),{value:2,unit:'min 25 s'});
+ assert.equal(C.formatElapsed(logs[0].seconds),'2 min 25 s');
+ assert.equal(C.formatElapsed(C.sumSeconds(logs)),'2 min 25 s');
+ assert.equal(C.week(logs,ts).at(-1).seconds,145);
+ assert.equal(C.formatElapsed(12),'12 s');
+ assert.equal(C.formatElapsed(3605),'1 h 5 s');
+ assert.equal(C.formatElapsed(0),'0 min');
+});

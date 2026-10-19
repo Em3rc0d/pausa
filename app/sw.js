@@ -5,6 +5,12 @@ const SHELL = ['./','./index.html','./styles.css',
   './fullbody.js','./app.js','./core.js','./data.js','./agent-core.js','./agent-planner.js','./agent-ui.js',
   './agent-worker.js','./manifest.webmanifest','./assets/icon.svg','./assets/icon-192.png',
   './assets/icon-512.png','./assets/fullbody/catalog.json',
+  './assets/fullbody/posters/090-seated-overhead-bilateral.png',
+  './assets/fullbody/gifs/090-seated-overhead-bilateral.gif',
+  './assets/fullbody/posters/081-seated-heels-bilateral.png',
+  './assets/fullbody/gifs/081-seated-heels-bilateral.gif',
+  './assets/fullbody/posters/087-seated-side-bend-bilateral.png',
+  './assets/fullbody/gifs/087-seated-side-bend-bilateral.gif',
   ...['walk','shoulders','pelvisChair','torso','shift','pelvicFloor','catCow','knees','bridge','birdDog','sitStand']
     .flatMap(id=>['./assets/exercises/'+id+'.png','./assets/exercises/'+id+'.gif'])];
 
@@ -29,7 +35,7 @@ self.addEventListener('fetch',event=>{
   // GIF and posters can stay cache-first: immutable within a release.
   event.respondWith((async()=>{
    const cache=await caches.open(MEDIA_CACHE);
-   const cached=await cache.match(req);
+   const cached=await cache.match(req)||await caches.match(req);
    if(cached)return cached;
    const response=await fetch(req);
    if(response.ok){try{await cache.put(req,response.clone())}catch{ /* quota exceeded */ }}

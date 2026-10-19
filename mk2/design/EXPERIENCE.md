@@ -1,6 +1,6 @@
 # Experiencia esencial
 
-Inicio → Pausa sentado → comprobar precauciones si corresponde → hombros / pelvis / giro suave del tronco (todos originales y realizables sentado) → temporizador con pausa y siguiente → actividad local. Total nominal 145 segundos.
+Inicio → Pausa sentado → comprobar precauciones si corresponde → alcance suave de brazos / elevación de talones / inclinación lateral del tronco (todos originales y realizables sentado) → temporizador con pausa y siguiente → actividad local. Total nominal 145 segundos.
 
 Recordatorios → activar / desactivar → intervalos 25, 30, 45, 60 o 90 minutos → horario optativo inicio/fin y días laborables → aviso → iniciar o posponer 10 min. La app no detecta movimiento ni si realmente se está sentado.
 

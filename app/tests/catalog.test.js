@@ -19,3 +19,25 @@ test('Pausa sentado existe y no exige ponerse de pie',()=>{
  assert.equal(r.total,r.ids.reduce((sum,id)=>sum+exercises[id].seconds,0));
  for(const id of r.ids)assert.match(exercises[id].place,/Sentado|silla/i);
 });
+
+test('Pausa sentado usa tres movimientos HQ reales cuyo contenido coincide con el GIF',()=>{
+ const path=require('node:path'),fs=require('node:fs');
+ const catalog=JSON.parse(fs.readFileSync(path.join(__dirname,'../assets/fullbody/catalog.json'),'utf8'));
+ const seated=routines.find(r=>r.id==='seated');
+ assert.deepEqual(Array.from(seated.ids),['seatedReach','seatedHeels','seatedSideBend']);
+ const expected={
+  seatedReach:'seated-overhead-bilateral',
+  seatedHeels:'seated-heels-bilateral',
+  seatedSideBend:'seated-side-bend-bilateral'
+ };
+ for(const id of seated.ids){
+  const e=exercises[id],item=catalog.find(x=>x.id===expected[id]);
+  assert.ok(e,'Debe existir instrucción para '+id);
+  assert.equal(e.place,'Sentado');
+  assert.equal(e.mediaId,expected[id],id+' apunta al movimiento visual correcto');
+  assert.ok(item,'Falta animación HQ para '+id);
+  assert.ok(item.title.toLowerCase().includes('sentado'),item.title+' debe ser sentado');
+  assert.ok(fs.existsSync(path.join(__dirname,'..',item.gif)),item.gif);
+  assert.ok(fs.existsSync(path.join(__dirname,'..',item.poster)),item.poster);
+ }
+});

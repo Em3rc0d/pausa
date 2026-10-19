@@ -9,3 +9,5 @@
 **Pruebas físicas pendientes:** Chrome/Firefox móviles y escritorio, permisos, suspensión/reinicio, recordatorios duplicados en pestañas múltiples, horario en cambio de zona, app cerrada, instalación/offline, navegación accesible y revisión de indicaciones.
 
 **Comercial:** pago real confirmado, beneficio/entrega, reembolso, política fiscal y soporte no existen todavía. NO GO comercial.
+
+**Regresión visual HQ pendiente de validación manual:** Pausa sentado debe mostrar una persona sentada en sus tres movimientos HQ y sus GIF deben corresponder a alcance de brazos, elevación de talones e inclinación lateral, tanto en tarjeta como en sesión. Se añadieron tests de mapeo del catálogo, archivos locales y precarga. La verificación de hashes de todos los archivos multimedia sigue bajo npm run check.

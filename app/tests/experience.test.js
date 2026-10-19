@@ -26,3 +26,16 @@ test('camino sentado inmediato y aviso de modelo pesado',()=>{
  assert.match(read('agent-ui.js'),/sin IA ni descarga/);
  assert.match(read('app.js'),/showSystemReminder/);
 });
+
+test('la pantalla, el toggle y el offline reutilizan el mismo recurso HQ de la rutina sentada',()=>{
+ const app=read('app.js'),sw=read('sw.js');
+ assert.match(app,/function guidedMedia\(id\)/);
+ assert.match(app,/const useNew=guidedMedia\(id\)/);
+ assert.match(app,/const a=guidedMedia\(id\)/);
+ assert.match(app,/\|\|guidedMedia\(r\.ids\[0\]\)/);
+ for(const media of ['090-seated-overhead-bilateral','081-seated-heels-bilateral','087-seated-side-bend-bilateral']){
+  assert.ok(sw.includes(media+'.png'),media+' poster no precargado');
+  assert.ok(sw.includes(media+'.gif'),media+' GIF no precargado');
+ }
+ assert.match(sw,/cache\.match\(req\)\|\|await caches\.match\(req\)/);
+});

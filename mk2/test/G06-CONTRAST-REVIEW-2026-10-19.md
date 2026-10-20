@@ -29,3 +29,7 @@ Cálculo de luminancia sRGB y ratio (L1 + 0.05)/(L2 + 0.05) conforme a la defini
 1. En checkout completo del HEAD de la rama, ejecutar `npm run check`; documentar commit y resultado.
 2. Comprobar visualmente que los textos secundarios en Inicio, Rutinas, Preferencias y Actividad mantienen jerarquía y contraste en Chrome/Firefox, móvil/escritorio y zoom 200 %.
 3. Mantener G06 abierto hasta ejecutar protocolo completo y revisión profesional del contenido. No lanzar beta pública desde este cambio aislado.
+
+
+## Resultado de incorporación de la corrección
+El código y el test de contraste de la [PR #5](https://github.com/Em3rc0d/pausa/pull/5) se fusionaron a release en `67bc70be03c7294bc83c4f54b7a7daf18ee9b970`, después del CS-04. Los tres casos del archivo de accesibilidad se ejecutaron en V8 aislado y pasaron; **no** se volvió a ejecutar `npm run check` nativo sobre ese commit combinado. Los números de contraste aplican a los tokens estudiados, no a cada estilo calculado en navegador. El gate G06 continúa **PARCIAL/PENDIENTE**, con teclado, lector de pantalla, zoom, navegación responsive y evaluación profesional por realizar. El merge solicitado no constituye una certificación WCAG.

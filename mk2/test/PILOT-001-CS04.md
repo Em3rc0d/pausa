@@ -28,7 +28,7 @@
 - **Antes:** todo cambio de intervalo notificaba literalmente “Tu próximo recordatorio será en N minutos”, incluso cuando el horario habilitado mueve el siguiente aviso a la próxima ventana o los recordatorios están apagados.
 - **Severidad:** P2 (promesa temporal engañosa). **Evidencia:** `app/app.js` en el evento change y `Core.nextAllowedReminder()`.
 - **Cambio mínimo:** `Core.reminderFrequencyFeedback()` distingue activo sin horario, activo con horario y desactivado, sin prometer exactitud que el navegador no garantiza. `app.js` usa el helper al cambiar el intervalo.
-- **Acceptance:** los tres estados y normalización de intervalos inválidos devuelven copy coherente; **4/4 evaluaciones de helper** ejecutadas en V8 sobre primera versión; revalidación del nuevo árbol requerida.
+- **Acceptance:** los tres estados y normalización de intervalos inválidos devuelven copy coherente; **4/4 evaluaciones de helper** cubiertas por los tests `core.test.js` ejecutados con el V8 shim en la rama reconciliada.
 
 ### UX-003 — Riesgo visual no confirmado (NO FIX)
 - **Flujos:** F-01/F-02, en 360 px.
@@ -38,7 +38,7 @@
 ## Evidencia ejecutada (sin extrapolar)
 - Se consultó el source del release candidate desde GitHub, no se descargó el proyecto completo (restricción de red del entorno local).
 - `Core.reminderFrequencyFeedback()` fue **ejecutado desde el texto JS recuperado** en un motor V8 aislado, cuatro combinaciones relevantes: PASS 4/4.
-- Los archivos `app/tests/core.test.js` y `app/tests/experience.test.js` se evaluaron en V8 con shims de `require`, `fs`, `path`, `assert` y `node:test`, leyendo las versiones actuales del código fuente de GitHub: **19/19 aserciones-test PASS en HEAD anterior; revalidación sobre baseline actualizado requerida**. Esto verifica esos tests con el harness aproximado, **no equivale a Node `--test` oficial**.
+- Los archivos `app/tests/core.test.js` y `app/tests/experience.test.js` se evaluaron en V8 con shims de `require`, `fs`, `path`, `assert` y `node:test`, leyendo las versiones actuales del código fuente de GitHub: **22/22 aserciones-test PASS en la rama reconciliada**. Esto verifica esos tests con el harness aproximado, **no equivale a Node `--test` oficial**.
 - **NO EJECUTADO:** `npm run check` raíz, 52+ tests completos, `scripts/check-repository.mjs`, hash de medios, Playwright/Chromium, Axe, validación visual, pruebas móviles físicas, permisos reales, instalación PWA, pruebas de inferencia 512 MB, QA clínica y comercial.
 - No se modificaron `agent-core`, `agent-planner`, `agent-worker`, `data`, rutinas, catálogo, ilustraciones ni medios.
 
@@ -49,8 +49,8 @@
 | B0 identidad de release | PASS | base exacta y rama aislada |
 | Tres recorridos especificados | PASS (contrato) | rutas/controles/errores identificados |
 | UX-001 fuente y patch acotado | PASS (source) | validar lector de pantalla |
-| UX-002 lógica de mensajes | PASS (V8 en versión anterior); RECHECK actual pendiente | validar toast en navegador |
-| Tests núcleo/experiencia con shims | PASS (19/19 previo); RECHECK actual pendiente | ejecutar Node real |
+| UX-002 lógica de mensajes | PASS (casos ejecutados en V8 shim en HEAD actual) | validar toast en navegador |
+| Tests núcleo/experiencia con shims | PASS (22/22 en HEAD reconciliado, con shim) | ejecutar Node real |
 | `npm run check` en checkout completo | NOT RUN | ejecutar en Windows/Node 24 |
 | Chromium 360/768/1280 | NOT RUN | screenshots antes/después, scroll horizontal, keyboard |
 | Reducción de movimiento / offline / permisos | NOT RUN | prueba por dispositivo/navegador |
@@ -71,4 +71,4 @@ Luego visitar `http://localhost:4173/#inicio`, `/#agente` y `/#ajustes` en los t
 
 ## Reconciliación por avance concurrente del release
 
-Tras iniciarse el piloto, la rama release avanzó un commit desde `1c5d865` a `5925df4`: toca los mismos `app/app.js`, `app/core.js` y ambos tests, y añade controles de prueba de notificación, tests del Service Worker y documentación. El PR original no era fusionable. Se abrió **una rama nueva desde `5925df4` y se reaplicaron únicamente los dos fixes y sus tests sobre los archivos actualizados**, sin revertir las mejoras de la release. El PR viejo debe cerrarse sin merge. Ninguna prueba de la rama anterior certifica por sí sola la reconciliada; el gate permanece en HOLD.
+Tras iniciarse el piloto, la rama release avanzó un commit desde `1c5d865` a `5925df4`: toca los mismos `app/app.js`, `app/core.js` y ambos tests, y añade controles de prueba de notificación, tests del Service Worker y documentación. El PR original no era fusionable. Se abrió **una rama nueva desde `5925df4` y se reaplicaron únicamente los dos fixes y sus tests sobre los archivos actualizados**, sin revertir las mejoras de la release. El PR viejo debe cerrarse sin merge. El V8 shim fue repetido con los archivos actuales: 22/22 PASS. La suite oficial de Node, browser, PWA y el gate de release siguen en HOLD.

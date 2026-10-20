@@ -34,8 +34,10 @@ test('los colores de texto secundarios clave alcanzan contraste 4.5:1 sobre supe
  assert.match(css,/:root\{--muted:#52644a\}/);
  assert.match(css,/\.setting-note,\.settings-row small,\.modal-head p,\.checkin-scale span,\.checkin-caption,\.finished-copy\{/);
  assert.match(css,/color:#536b62;/);
+ // La regla transversal de pequeños textos no puede usar el tono v1.11 de bajo contraste.
+ assert.match(css,/\.subheading,\.subtext,\.routine-card p[^\n]*\{color:#536b62\}/);
  for(const fg of ['#52644a','#536b62']){
-  for(const bg of ['#ffffff','#f7f8f4','#f0f5ee']){
+  for(const bg of ['#ffffff','#f7f8f4','#f0f5ee','#f6f8f5','#eaf0df']){
    assert.ok(ratio(fg,bg)>=4.5,fg+' sobre '+bg+' tiene contraste '+ratio(fg,bg).toFixed(2));
   }
  }

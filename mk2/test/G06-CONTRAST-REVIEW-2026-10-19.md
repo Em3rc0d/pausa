@@ -33,3 +33,8 @@ Cálculo de luminancia sRGB y ratio (L1 + 0.05)/(L2 + 0.05) conforme a la defini
 
 ## Resultado de incorporación de la corrección
 El código y el test de contraste de la [PR #5](https://github.com/Em3rc0d/pausa/pull/5) se fusionaron a release en `67bc70be03c7294bc83c4f54b7a7daf18ee9b970`, después del CS-04. Los tres casos del archivo de accesibilidad se ejecutaron en V8 aislado y pasaron; **no** se volvió a ejecutar `npm run check` nativo sobre ese commit combinado. Los números de contraste aplican a los tokens estudiados, no a cada estilo calculado en navegador. El gate G06 continúa **PARCIAL/PENDIENTE**, con teclado, lector de pantalla, zoom, navegación responsive y evaluación profesional por realizar. El merge solicitado no constituye una certificación WCAG.
+
+
+## Verificación nativa posterior en main — 19-10-2026
+
+La suite completa se ejecutó de nuevo sobre `main@2b70b650d9dfcc54bb610b1d4e21b795d8bb2b64`, **después** de incorporar G06: **69/69 PASS** y verificador de repositorio PASS (49 documentos, 101 enlaces, 112 GIF y 112 PNG). Esto confirma que los tests automatizados de contraste y semántica pasan en el código fusionado. Las notas anteriores de «sin reejecución nativa» describen solo el estado anterior a esta validación. La revisión de CSS calculado en navegador, contraste de otros estados, teclado, lectores de pantalla, zoom y revisión profesional continúa sin ejecutarse y **G06 no se considera cerrado**.

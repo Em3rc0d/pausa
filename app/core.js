@@ -45,6 +45,12 @@
  }
  function formatElapsed(seconds){const {value,unit}=elapsedParts(seconds);return value+' '+unit;}
 
+ function reminderFrequencyFeedback(r){
+  const interval=VALID_INTERVALS.includes(Number(r?.interval))?Number(r.interval):30;
+  if(!r?.enabled)return `Intervalo de ${interval} minutos guardado. Los recordatorios siguen desactivados.`;
+  if(r.scheduleEnabled)return `Cada ${interval} minutos dentro de tu horario permitido, mientras Pausa esté abierta.`;
+  return `Cada ${interval} minutos mientras Pausa esté abierta.`;
+ }
  function streak(logs,now=Date.now()){
   const days=new Set(logs.map(l=>dateKey(l.at)));const today=dateKey(now);let d=new Date(now);d.setHours(12,0,0,0);if(!days.has(today))d.setDate(d.getDate()-1);
   let count=0;while(count<1000&&days.has(dateKey(d.getTime()))){count++;d.setDate(d.getDate()-1)}return count;
@@ -53,5 +59,5 @@
   const dates=[];const today=new Date(now);today.setHours(12,0,0,0);
   for(let i=6;i>=0;i--){const d=new Date(today);d.setDate(today.getDate()-i);const key=dateKey(d.getTime());const seconds=sumSeconds(dayLogs(logs,key));dates.push({key,seconds,minutes:Math.round(seconds/60),label:new Intl.DateTimeFormat('es',{weekday:'short'}).format(d).replace('.','')});}return dates;
  }
- return {VALID_INTERVALS,dateKey,minutes,formatClock,fromMinutes,normalize,nextAllowedReminder,dayLogs,sumSeconds,sumMinutes,elapsedParts,formatElapsed,streak,week};
+ return {VALID_INTERVALS,dateKey,minutes,formatClock,fromMinutes,normalize,nextAllowedReminder,dayLogs,sumSeconds,sumMinutes,elapsedParts,formatElapsed,reminderFrequencyFeedback,streak,week};
 });

@@ -71,3 +71,10 @@ npm run check
 npm start
 ```
 La transición a `verify/cs04-final-20261019` requiere árbol de trabajo limpio. `git switch` conserva la rama anterior y sus commits, sin `reset --hard`, `rebase` ni `push --force`.
+
+
+## Actualización de la evidencia e integración al release — 2026-10-19
+- El propietario verificó en Windows el **HEAD `dcf760b5d112549ac2f851ea9a69e5f7e48ee4ec`**, obtenido al crear una rama de verificación desde `origin/pilot/cs04-final-reconciled-2026-10-19`. `node --test app/tests/service-worker.test.js` **6/6 PASS** y `npm run check` **69/69 PASS**, seguidos de `check:repository` PASS (293 inventario, 48 documentos, 93 enlaces, 112 GIF, 112 PNG).
+- [PR #4](https://github.com/Em3rc0d/pausa/pull/4) fusionado a release mediante squash `18f6cf901a6450fad66c601ef75edd115db7ba76`, antes de la [PR #5](https://github.com/Em3rc0d/pausa/pull/5), squash `67bc70be03c7294bc83c4f54b7a7daf18ee9b970`. No hay conflictos ni modificaciones en el Service Worker productivo procedentes de CS-04.
+- Los resultados 69/69 anteriores se mantienen como evidencia del commit ensayado, **no** como certificación de los commits posteriores de integración. Las referencias anteriores a “pendiente de suite nativa” corresponden a la historia previa de este piloto y no invalidan la prueba realizada después.
+- Veredicto del método CS-04: dos hallazgos fuente corregidos y cubiertos por tests. **PARTIAL** hasta validar accesibilidad y UX realmente en Chromium/NVDA con viewports y estados de interés, y medir beneficios antes de elevarlo a modelo general de trabajo.

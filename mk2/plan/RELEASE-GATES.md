@@ -2,7 +2,7 @@
 
 | Gate | Prueba exigida | Estado |
 |---|---|---|
-| G01 | árbol/commit SHA e identificación de cambios | INTEGRATION CANDIDATE; release base 67bc70be, PR #4 y PR #5 incorporadas; main por fusionar |
+| G01 | árbol/commit SHA e identificación de cambios | INTEGRADO EN MAIN mediante PR #6 (merge 17bd62ed); CS-04 PR #4 y G06 PR #5 incluidos. Este estado no equivale a GO de despliegue |
 | G02 | npm run check completo; integridad de 112 GIF y posters | PASS 69/69 + check:repository en dcf760b5 (Windows, 19-10-2026); la integración posterior G06 67bc70be requiere reejecución nativa para certificar ese HEAD |
 | G03 | end-to-end rutina sentada y alertas en navegadores reales | 3/3 flujo básico PASS en Windows; accesibilidad/dispositivos PENDIENTES |
 | G04 | instalación PWA, upgrade SW, offline, cuota | PASS manual: instalación + offline; actualización/cuota PENDIENTES |

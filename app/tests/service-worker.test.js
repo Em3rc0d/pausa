@@ -7,20 +7,22 @@ const path=require('node:path');
 const code=fs.readFileSync(path.join(__dirname,'../sw.js'),'utf8');
 function harness(){
  const events={},stores=new Map(),clients=[],opened=[],cacheFiles=[];
- const normalize=request=>{
+ const normalize=(request,{ignoreSearch=false}={})=>{
   const raw=typeof request==='string'?request:request.url;
-  return new URL(raw,'https://pausa.test/').href.split('?')[0];
+  const url=new URL(raw,'https://pausa.test/');
+  if(ignoreSearch)url.search='';
+  return url.href;
  };
  const store=name=>{if(!stores.has(name))stores.set(name,new Map());return stores.get(name)};
  const cacheStorage={
   open:async name=>({
-   addAll:async urls=>{for(const url of urls){cacheFiles.push(url);store(name).set(url,{ok:true,source:'install'})}},
-   match:async request=>store(name).get(normalize(request)),
+   addAll:async urls=>{for(const url of urls){cacheFiles.push(url);store(name).set(normalize(url),{ok:true,source:'install'})}},
+   match:async(request,options)=>store(name).get(normalize(request,options)),
    put:async(request,response)=>{store(name).set(normalize(request),response)}
   }),
   keys:async()=>[...stores.keys()],
   delete:async name=>stores.delete(name),
-  match:async request=>{for(const saved of stores.values()){const response=saved.get(normalize(request));if(response)return response}return undefined}
+  match:async(request,options)=>{for(const saved of stores.values()){const response=saved.get(normalize(request,options));if(response)return response}return undefined}
  };
  const worker={location:{origin:'https://pausa.test'},clients:{
   matchAll:async()=>clients,openWindow:async url=>{opened.push(url)}
@@ -75,4 +77,20 @@ test('el HTML y los scripts de la instalación quedan accesibles sin conexión',
   const reply=await h.fire('fetch',{request:req});
   assert.equal(reply.source,'install',asset+' debe servirse desde el shell local');
  }
+});
+
+test('los recursos con versión usan ignoreSearch solo cuando se solicita',async()=>{
+ const h=harness();
+ await h.fire('install');
+ const req={method:'GET',url:'https://pausa.test/app.js?v=1.12.0',mode:'same-origin'};
+ assert.equal(await h.cacheStorage.match(req),undefined,'una consulta normal preserva el query');
+ assert.equal((await h.cacheStorage.match(req,{ignoreSearch:true})).source,'install');
+ h.setOnline(false);
+ assert.equal((await h.fire('fetch',{request:req})).source,'install','el JS versionado tiene fallback offline');
+});
+test('los scripts precargados siguen network-first si hay conexión',async()=>{
+ const h=harness();
+ await h.fire('install');
+ const req={method:'GET',url:'https://pausa.test/app.js?v=1.12.0',mode:'same-origin'};
+ assert.equal((await h.fire('fetch',{request:req})).source,'network');
 });

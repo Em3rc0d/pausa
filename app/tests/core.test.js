@@ -29,3 +29,11 @@ test('el tiempo transcurrido se presenta exactamente y no se redondea contradict
  assert.equal(C.formatElapsed(3605),'1 h 5 s');
  assert.equal(C.formatElapsed(0),'0 min');
 });
+
+
+test('el aviso del intervalo no promete un recordatorio inmediato fuera del horario',()=>{
+ assert.equal(C.reminderFrequencyFeedback({enabled:true,interval:30,scheduleEnabled:true}),'Cada 30 minutos dentro de tu horario permitido, mientras Pausa esté abierta.');
+ assert.equal(C.reminderFrequencyFeedback({enabled:true,interval:45,scheduleEnabled:false}),'Cada 45 minutos mientras Pausa esté abierta.');
+ assert.equal(C.reminderFrequencyFeedback({enabled:false,interval:60,scheduleEnabled:true}),'Intervalo de 60 minutos guardado. Los recordatorios siguen desactivados.');
+ assert.equal(C.reminderFrequencyFeedback({enabled:true,interval:900,scheduleEnabled:false}),'Cada 30 minutos mientras Pausa esté abierta.');
+});

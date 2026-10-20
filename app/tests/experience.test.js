@@ -48,3 +48,17 @@ test('el historial muestra segundos exactos, barras precisas y concordancia sing
  assert.match(app,/count===1\?'Sesión completada':'Sesiones completadas'/);
  assert.match(app,/t\.streak===1\?'día':'días'/);
 });
+
+
+test('los siete días de Actividad tienen un equivalente textual accesible, sin valores inventados',()=>{
+ const app=read('app.js');
+ assert.match(app,/class="bar-chart" aria-hidden="true"/);
+ assert.match(app,/class="sr-only" aria-label="Duración de sesiones por cada día de los últimos siete días"/);
+ assert.match(app,/seven\.map\(day=>`<li>\$\{esc\(day\.key\)\}: \$\{Core\.formatElapsed\(day\.seconds\)\}<\/li>`\)/);
+ assert.match(read('styles.css'),/\.sr-only\{/);
+});
+test('el feedback de frecuencia usa estado y horario reales, no promete una fecha falsa',()=>{
+ const app=read('app.js');
+ assert.match(app,/notifyToast\('Frecuencia actualizada',Core\.reminderFrequencyFeedback\(state\.reminders\)\)/);
+ assert.doesNotMatch(app,/Tu próximo recordatorio será en/);
+});

@@ -114,3 +114,7 @@ Más información técnica, limitaciones y precauciones: [AI-LOCAL.md](AI-LOCAL.
 La guía puede **mostrar tres movimientos opcionales de muy baja exigencia** al introducir 6 o 7/10, **solo** si el cuestionario no indica señales de riesgo adicionales. Se exige confirmación explícita antes de comenzar. No se recomienda trabajo lumbar de suelo ni fortalecimiento en ese nivel; no se promete beneficio clínico. La aplicación aconseja consulta médica. Para 8–10/10, síntomas con irradiación u otras alertas, la guía automatizada continúa restringida; las señales de alarma urgentes se bloquean. La evaluación médica es prioritaria ante dolor importante o persistente.
 
 **Un aviso y una casilla de conformidad no eliminan la responsabilidad legal ni convierten a Pausa en un producto clínicamente validado.** Antes de promocionarla como ayuda para dolor o tratamiento, hace falta revisión médica/rehabilitadora del contenido y asesoría legal sobre el mercado de distribución.
+
+## Release candidate 1.12.0
+
+Nuevo camino de rutina guiada sentado, disponible sin cargar el modelo de IA y priorizado desde la portada. Avisos dentro del navegador con horario laboral optativo y mejores notificaciones cuando el service worker esté activo. No garantiza avisos tras cerrar la app y no incluye checkout. Ver [MK2](../mk2/README.md).

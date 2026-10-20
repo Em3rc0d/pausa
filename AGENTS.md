@@ -12,3 +12,7 @@ Lee README.md, mk1/design/SRS.md, mk1/arch/ARCHITECTURE.md y app/SELECTION-SPEC.
 - Ejecutar npm run check desde la raíz. Las pruebas de navegador/modelo se ejecutan cuando el cambio las justifique; no afirmar que los tests unitarios certifican calidad clínica.
 - Las verificaciones y compilaciones se realizan localmente. No crear GitHub Actions para este repositorio sin autorización explícita.
 - No publicar credenciales, pesos del modelo, cachés, ZIP duplicados ni capturas privadas. El directorio de publicación estática es app/.
+
+## MK2 release candidate
+
+Los cambios 1.12 están en mk2/ y NO sustituyen la validación clínica/comercial ni el método generativo de MK1. La rutina estática sentado no debe etiquetarse como IA. El verificador del repositorio preserva los hashes originales v1.11 de los archivos no modificados y registra explícitamente los archivos del release candidate. No declarar GO sin npm run check y pruebas reales.

@@ -18,7 +18,7 @@
   if(request)cancelGeneration();
   const safety=state.safety;
   const preview=LIBRARY.find(x=>x.id==='shoulder-backward-bilateral')||LIBRARY[0];
-  return `<section class="page-head guide-heading"><div class="eyebrow">UNA PAUSA A TU MEDIDA · V1.11.0</div><h1>Un momento.<br><em>¿Cómo te sientes?</em></h1><p class="subheading">Una rutina breve de movilidad para hacer una pausa después de estar sentado.</p></section>
+  return `<section class="page-head guide-heading"><div class="eyebrow">UNA PAUSA A TU MEDIDA · V1.12.0</div><h1>Un momento.<br><em>¿Cómo te sientes?</em></h1><p class="subheading">Una rutina breve de movilidad para hacer una pausa después de estar sentado.</p></section>
   <aside class="guide-general-notice" aria-label="Aviso antes de crear la rutina"><strong>Una propuesta general. Tú eliges cómo moverte.</strong><p>Esta guía no diagnostica ni trata el dolor. Si tienes un problema frecuente, persistente o que empeora, consulta a un profesional de salud. Decide qué movimientos realizar y detente si alguno aumenta tus molestias. Las ilustraciones están pendientes de revisión clínica.</p></aside>
   ${statusBanner()}
   <div class="agent-layout"><section class="panel agent-panel"><div class="guide-progress" aria-label="Describe cómo te sientes para elegir movimientos"><span class="active"><b>01</b> Cuéntanos</span><span><b>02</b> Elige tu pausa</span><span><b>03</b> Muévete</span></div>
@@ -37,6 +37,7 @@
   <details class="agent-options"><summary>Ajustar a mi espacio y mis límites ${icon('settings',15)}</summary><div class="agent-options-body"><label for="agentPosition">¿Cómo quieres moverte?<select id="agentPosition"><option value="seated" ${draft.position==='seated'?'selected':''}>Permanecer sentado</option><option value="standing" ${draft.position==='standing'?'selected':''}>También puedo ponerme de pie</option></select></label><label class="agent-checkbox"><input type="checkbox" id="agentFloor" ${draft.floor?'checked':''}><span>También tengo una superficie cómoda para movimientos de suelo.</span></label><fieldset class="avoid-zones"><legend>Zonas que quiero evitar</legend>${zoneList.filter(([z])=>z!=='general').map(([z,l])=>`<label><input type="checkbox" data-avoid-zone value="${z}" ${draft.avoidZones.includes(z)?'checked':''}><span>${escHtml(l)}</span></label>`).join('')}</fieldset><p>Descarta cualquier movimiento que no te resulte cómodo. Las exclusiones se mantienen mientras tengas esta pestaña abierta.</p><div class="excluded-summary">${excludedMoves.size?`${excludedMoves.size} movimiento(s) descartado(s). <button type="button" class="link-action" data-agent-action="reset-exclusions">Restablecer</button>`:'Todavía no has descartado movimientos.'}</div></div></details>
   <div class="guide-safety-inline">${icon('shield',17)}<span>Rutina general de movilidad. <button type="button" class="link-action" data-action="safety">Ver precauciones</button></span></div>
   ${safety==='urgent'?'<div class="agent-preflight agent-danger">Has indicado señales de alarma. No hagas ejercicios; busca atención urgente.</div>':''}
+  <div class="guide-no-model" role="note"><p><strong>¿Necesitas moverte ahora?</strong> La rutina «Pausa sentado» comienza sin IA ni descarga. La guía con IA requiere unos 512 MB en el primer uso y puede no ser compatible con todos los móviles.</p><button class="button secondary" type="button" data-nav="rutinas">Ver rutinas inmediatas</button></div>
   <div id="agentStatus" class="agent-status" role="status" tabindex="-1" hidden></div>
   <button class="button primary agent-submit" type="submit" id="agentGenerate" ${safety==='urgent'?'disabled':''}>Crear mi pausa ${icon('arrow',18)}</button><p class="guide-submit-note">Sin registro. Sin equipo. Con tiempo para ti.</p>
   </form></section>
@@ -62,7 +63,7 @@
  }
  function workerCompose(data,requireChange){return new Promise((resolve,reject)=>{
   if(typeof Worker!=='function'){reject(Error('unavailable'));return;}
-  if(!worker){worker=new Worker('./agent-worker.js?v=1.11.0',{type:'module'});
+  if(!worker){worker=new Worker('./agent-worker.js?v=1.12.0',{type:'module'});
    worker.onmessage=event=>{const d=event.data||{};if(!request||d.id!==request.id)return;clearTimeout(request.timeout);const r=request;request=null;if(d.type==='result')r.resolve({output:d.output,count:d.count});else{worker?.terminate();worker=null;r.reject(Error('unavailable'));}};
    worker.onerror=()=>{if(request){clearTimeout(request.timeout);request.reject(Error('unavailable'));request=null;}worker?.terminate();worker=null;};
   }

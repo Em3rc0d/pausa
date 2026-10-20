@@ -78,3 +78,10 @@ La transición a `verify/cs04-final-20261019` requiere árbol de trabajo limpio.
 - [PR #4](https://github.com/Em3rc0d/pausa/pull/4) fusionado a release mediante squash `18f6cf901a6450fad66c601ef75edd115db7ba76`, antes de la [PR #5](https://github.com/Em3rc0d/pausa/pull/5), squash `67bc70be03c7294bc83c4f54b7a7daf18ee9b970`. No hay conflictos ni modificaciones en el Service Worker productivo procedentes de CS-04.
 - Los resultados 69/69 anteriores se mantienen como evidencia del commit ensayado, **no** como certificación de los commits posteriores de integración. Las referencias anteriores a “pendiente de suite nativa” corresponden a la historia previa de este piloto y no invalidan la prueba realizada después.
 - Veredicto del método CS-04: dos hallazgos fuente corregidos y cubiertos por tests. **PARTIAL** hasta validar accesibilidad y UX realmente en Chromium/NVDA con viewports y estados de interés, y medir beneficios antes de elevarlo a modelo general de trabajo.
+
+
+## Cierre técnico posterior a la integración en main — 19-10-2026
+
+Consolidación comprobada por el propietario tras `git pull --ff-only origin main` desde `433e00b` a `2b70b650d9dfcc54bb610b1d4e21b795d8bb2b64`: `npm run check` **69/69 PASS**, `check:repository` **PASS**, 293 archivos de inventario, 49 documentos, 101 enlaces locales y los 224 medios originales íntegros. Esta ejecución incluye el fix posterior de G06 y supera la limitación temporal descrita en las notas anteriores: ya existe **G02 PASS en main**.
+
+El piloto **no queda evaluado como GO de accesibilidad visual**: falta inspeccionar el gráfico en Accessibility Tree/lector, navegación por teclado, responsive/zoom y confirmación de recordatorios en el navegador, sin exigir que el propietario repita la suite estática o las pruebas de notificación ya superadas. El beneficio cuantificado de CS-04 continúa UNKNOWN.

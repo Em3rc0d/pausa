@@ -15,3 +15,9 @@ Objetivo: recordatorios no invasivos y pausas voluntarias de movimiento, incluid
 - mining-site/SOURCES.md — recibos de fuentes
 
 Esta rama no incluye cobros, suscripciones, cuentas, Android, push persistente, validación clínica ni ventas verificadas.
+
+## Nuevos gates tras QA de campo
+
+- [Plan de beta 14 días](plan/BETA-PILOT.md): selección voluntaria, consentimiento, adopción, retención y salida GO/PIVOT/KILL.
+- [Contrato comercial](plan/COMMERCIAL-READINESS.md): qué ofrecer, cómo medir disposición de pago y qué falta para cobrar legalmente.
+- [Protocolo G06](test/ACCESSIBILITY-PROTOCOL.md): lector, teclado, zoom, movimiento y revisión de contenido.

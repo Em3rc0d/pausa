@@ -85,3 +85,14 @@ body{background:var(--bg)}::selection{background:#d6e9a8;color:#173e30}button,a,
 .guide-no-model{margin:12px 0 16px;padding:14px;border:1px solid #dfe6dd;border-radius:14px;background:#f7faf5}
 .guide-no-model p{margin:0 0 12px;line-height:1.5}
 @media(max-width:380px){.reminder-schedule-grid{grid-template-columns:1fr}}
+
+/* MK2 G06: legibilidad y semántica de escalas, sin sustituir el design system. */
+:root{--muted:#52644a}
+.setting-note,.settings-row small,.modal-head p,.checkin-scale span,.checkin-caption,.finished-copy{
+ color:#536b62;
+}
+.setting-note,.settings-row small,.checkin-caption{font-size:12px;line-height:1.5}
+.checkin-scale span{font-size:13px}
+.modal-head p,.finished-copy{font-size:13px}
+.checkin-group{min-width:0;border:0;padding:0;margin:0}
+.checkin-group legend{padding:0;color:var(--text);font-size:12px;font-weight:600;line-height:1.5}

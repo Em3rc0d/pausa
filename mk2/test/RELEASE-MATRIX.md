@@ -33,3 +33,14 @@
 - **G06 PR #5:** cambio de regla secundaria CSS a `#536b62`, ampliación de la prueba de contraste y reporte `G06-CONTRAST-REVIEW-2026-10-19.md`. Los **3 tests específicos** de `a11y-contract.test.js` pasaron en V8 con acceso a las fuentes candidatas (no fue una ejecución nativa de Node de la versión combinada). Contraste calculado para cinco superficies, no inspección de cascada real.
 - **Pendiente sobre la versión integrada:** `npm run check` nativo, navegación/render móvil 360 px, tableta 768 px, escritorio 1280 px, teclado, Accessibility Tree y lector, zoom y preferencia de movimiento reducido. La instalación offline/aviso inmediato y sincronización de preferencias ya se observaron manualmente antes: G04 y G05 siguen **PARCIALES**, no volver a repetirlos sin cambios o evidencia contradictoria.
 - **Decisión:** este registro habilita integración de código/documentación en `main` a petición del propietario; **NO constituye G06 GO, beta GO, validación clínica o activación comercial**. Ni la prueba aislada de CSS ni los tests de Service Worker simulado certifican el funcionamiento en un navegador real.
+
+
+## Cierre de G02 en `main` — evidencia nativa del propietario, 19-10-2026
+
+**Baseline exacta probada:** `main@2b70b650d9dfcc54bb610b1d4e21b795d8bb2b64`, que ya incluía la fusión de MK2, CS-04 (PR #4) y el contraste G06 (PR #5) mediante PR #6. El usuario confirmó `git status --short` limpio, `git fetch origin`, `git switch main`, y `git pull --ff-only origin main` exitoso (`433e00b..2b70b65`), antes de ejecutar las pruebas en PowerShell/Windows.
+
+- `npm run check` → **69 tests, 69 PASS, 0 FAIL, 0 skipped**, comprobaciones de sintaxis incluidas.
+- `npm run check:repository` → `status: passed`; `snapshotFiles: 293`, `documents: 49`, `localLinks: 101`, `gifs: 112`, `posters: 112`, `currentVersion: 1.12.0`.
+- Los tres contratos de `a11y-contract.test.js` están entre los 69 PASS, incluidos contraste sobre los cinco fondos, `fieldset/legend` y navegación accesible estructural. El fix CS-04 y los seis casos de Service Worker también constan como PASS en esa suite.
+- **Veredicto G02: PASS en ese SHA, con correcciones CS-04 y G06 ya integradas.** Las actualizaciones documentales de este recibo no cambian `app/`. No reutilizar esta evidencia automáticamente después de mutaciones de código.
+- **Límite de evidencia:** pruebas automáticas de código y assets no demuestran accesibilidad calculada en navegador, operación real ante suspensión, cuotas del Service Worker, validez profesional de contenido o uso de terceros. G04/G05 permanecen PARCIALES; G06 (teclado, lector, zoom, contrastes efectivos y contenido profesional), G07–G09 siguen abiertos. No hay GO beta ni comercial.

@@ -14,7 +14,7 @@ function harness(){
  const store=name=>{if(!stores.has(name))stores.set(name,new Map());return stores.get(name)};
  const cacheStorage={
   open:async name=>({
-   addAll:async urls=>{for(const url of urls){cacheFiles.push(url);store(name).set(url,{ok:true,source:'install'})}},
+   addAll:async urls=>{for(const url of urls){cacheFiles.push(url);store(name).set(normalize(url),{ok:true,source:'install'})}},
    match:async request=>store(name).get(normalize(request)),
    put:async(request,response)=>{store(name).set(normalize(request),response)}
   }),

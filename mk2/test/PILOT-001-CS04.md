@@ -72,3 +72,22 @@ Luego visitar `http://localhost:4173/#inicio`, `/#agente` y `/#ajustes` en los t
 ## Reconciliación por avance concurrente del release
 
 Tras iniciarse el piloto, la rama release avanzó un commit desde `1c5d865` a `5925df4`: toca los mismos `app/app.js`, `app/core.js` y ambos tests, y añade controles de prueba de notificación, tests del Service Worker y documentación. El PR original no era fusionable. Se abrió **una rama nueva desde `5925df4` y se reaplicaron únicamente los dos fixes y sus tests sobre los archivos actualizados**, sin revertir las mejoras de la release. El PR viejo debe cerrarse sin merge. El V8 shim fue repetido con los archivos actuales: 22/22 PASS. La suite oficial de Node, browser, PWA y el gate de release siguen en HOLD.
+
+## Reejecución nativa del usuario y reparación del harness de Service Worker
+
+**Evidencia Windows PowerShell (2026-10-19):** después de `git fetch` y `git switch` a esta rama, `npm run check` ejecutó **64 tests: 62 PASS, 2 FAIL**. Los fallos fueron `app/tests/service-worker.test.js:42` (GIF HQ offline) y `:69` (HTML/scripts offline), ambos con error `offline`. `npm run check:repository` no alcanzó a ejecutarse porque la fase de tests terminó con error. `npm start` sí levantó servidor Python en puerto 4173; ello no constituye validación de UX.
+
+**Causa confirmada por inspección:** el *mock* de `CacheStorage` guardaba claves relativas durante `addAll` (por ejemplo `./index.html`), pero los métodos `match` buscaban URLs absolutas normalizadas (`https://pausa.test/index.html`). El error reproducía un defecto del harness, **no demostraba un fallo real de caché del navegador**.
+
+**Cambio:** en `app/tests/service-worker.test.js`, normalizar las claves en `addAll` y respetar explícitamente `ignoreSearch` en los métodos simulados `match`. Se añadieron dos regresiones: fallback offline de `app.js?v=1.12.0` y prioridad de red para scripts mientras hay conexión. **El `app/sw.js` de producción permanece intacto.**
+
+**Verificación disponible en esta sesión:** seis tests del archivo de Service Worker evaluados en motor V8 con shims de VM/URL/Node => **6/6 PASS**. La simulación no reemplaza `node --test` nativo. La suite original de 64 tests + dos nuevos se espera en 66 tests; **resultado nativo actual: PENDING**.
+
+Para cerrar el gate, en otra terminal mientras `npm start` permanece activo:
+
+```powershell
+git pull --ff-only origin pilot/cs04-reconciled-2026-10-19
+npm run check
+```
+
+Solo se podrá declarar GO de *suite técnica local* si pasan tests y `check:repository`. El GO visual de CS-04 exige aún Chromium y revisión accesible en 360/768/1280; el release completo y comercial mantienen sus gates independientes.

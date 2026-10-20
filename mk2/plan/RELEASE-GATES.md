@@ -3,7 +3,7 @@
 | Gate | Prueba exigida | Estado |
 |---|---|---|
 | G01 | árbol/commit SHA e identificación de cambios | INTEGRADO EN MAIN mediante PR #6 (merge 17bd62ed); CS-04 PR #4 y G06 PR #5 incluidos. Este estado no equivale a GO de despliegue |
-| G02 | npm run check completo; integridad de 112 GIF y posters | PASS 69/69 + check:repository en dcf760b5 (Windows, 19-10-2026); la integración posterior G06 67bc70be requiere reejecución nativa para certificar ese HEAD |
+| G02 | npm run check completo; integridad de 112 GIF y posters | **PASS — 69/69 pruebas, 0 fallos**; `check:repository` PASS en `main@2b70b650` (Windows, 19-10-2026): 293 archivos de inventario, 49 documentos, 101 enlaces locales, 112 GIF y 112 PNG íntegros. Incluye CS-04 y G06. Cualquier cambio posterior de código requiere reevaluación |
 | G03 | end-to-end rutina sentada y alertas en navegadores reales | 3/3 flujo básico PASS en Windows; accesibilidad/dispositivos PENDIENTES |
 | G04 | instalación PWA, upgrade SW, offline, cuota | PASS manual: instalación + offline; actualización/cuota PENDIENTES |
 | G05 | notificaciones granted/denied; suspensión, múltiples tabs, horario, DST | PASS manual: aviso inmediato + sincronización preferencias dos pestañas; vencimiento/suspensión/DST PENDIENTES |

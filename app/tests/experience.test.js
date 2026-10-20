@@ -48,3 +48,21 @@ test('el historial muestra segundos exactos, barras precisas y concordancia sing
  assert.match(app,/count===1\?'Sesión completada':'Sesiones completadas'/);
  assert.match(app,/t\.streak===1\?'día':'días'/);
 });
+
+test('permite comprobar notificación de forma explícita, sin alterar temporizador',()=>{
+ const app=read('app.js');
+ assert.match(app,/data-action="test-notification"/);
+ assert.match(app,/case 'test-notification':showSystemReminder\(true\)/);
+ assert.match(app,/test\?'Pausa · Notificación de prueba'/);
+ assert.match(app,/tag:test\?'pausa-notification-test'/);
+});
+
+test('coordina reclamaciones de vencimiento con Web Locks y recupera la UI desde una notificación',()=>{
+ const app=read('app.js'),sw=read('sw.js');
+ assert.match(app,/locks\.request\('pausa-reminder-claim',\{ifAvailable:true\}/);
+ assert.match(app,/function claimDueReminder\(\)/);
+ assert.match(app,/snapshot\.reminders=r/);
+ assert.match(app,/if\(!state\.session\)state\.session=latest\.session/);
+ assert.match(app,/event\.data\?\.type!=='pausa-reminder-open'/);
+ assert.match(sw,/postMessage\(\{type:'pausa-reminder-open'\}\)/);
+});

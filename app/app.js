@@ -60,7 +60,7 @@ function activityPage(){const seven=Core.week(state.logs),t=statsToday(),max=Mat
  <div class="mini-stat-grid"><div class="stat-card"><span class="stat-icon">${icon('check',18)}</span><div class="stat-value">${count}</div><p class="stat-label">${count===1?'Sesión completada':'Sesiones completadas'}</p></div><div class="stat-card"><span class="stat-icon">${icon('clock',18)}</span><div class="stat-value">${recorded.value}<span>${recorded.unit}</span></div><p class="stat-label">Movimiento registrado</p></div><div class="stat-card"><span class="stat-icon">${icon('spark',18)}</span><div class="stat-value">${t.streak}<span>${t.streak===1?'día':'días'}</span></div><p class="stat-label">Racha actual</p></div></div>
  <div class="activity-layout"><section class="panel"><h3>Últimos 7 días</h3><p class="panel-subtitle">Minutos de sesiones que completaste en Pausa.</p><div class="bar-chart" aria-label="Gráfico semanal de minutos">${seven.map(day=>`<div class="bar-col"><div class="bar-track" title="${esc(day.key)}: ${Core.formatElapsed(day.seconds)}"><div class="bar-fill" style="height:${day.seconds===0?0:Math.max(6,day.seconds/max*100)}%"></div></div><div class="bar-day">${esc(day.label)}</div></div>`).join('')}</div><div class="activity-legend">● &nbsp;Los datos son aproximados y no miden todo tu movimiento diario.</div></section>
  <section class="panel"><h3>Actividad reciente</h3><p class="panel-subtitle">Solo las sesiones registradas en este dispositivo.</p>${recent.length?`<div class="timeline">${recent.map(l=>`<div class="timeline-item"><span class="timeline-icon">${icon('check',16)}</span><div><strong>${esc(l.name)}</strong><small>${dateFmt(l.at)} ${timeFmt(l.at)} · ${Core.formatElapsed(l.seconds)}</small></div>${Number.isInteger(l.beforePain)&&Number.isInteger(l.afterPain)?`<div class="time" title="Molestia autopercibida antes y después">${l.beforePain} → ${l.afterPain}</div>`:''}</div>`).join('')}</div>`:`<div class="empty-state">${icon('activity',26)}<p>Todavía no hay sesiones registradas.<br>Tu primera pausa puede ser hoy.</p><button class="button primary" data-action="detail" data-routine="seated">Comenzar una pausa</button></div>`}</section></div>`}
-function settingsPage(){const r=state.reminders;return `<section class="page-head"><div class="eyebrow">TÚ DECIDES EL RITMO</div><h1>Un espacio a tu manera.</h1><p class="subheading">Tus preferencias y tu historial, guardados en este dispositivo.</p></section><div class="settings-grid"><div class="panel"><div class="panel-header"><span class="panel-icon">${icon('bell',20)}</span><div><h3>Recordatorios</h3><p class="panel-subtitle">Define cada cuánto necesitas cambiar de posición.</p></div></div><div class="setting-group"><label for="intervalInput">Frecuencia de las pausas</label><select id="intervalInput">${Core.VALID_INTERVALS.map(n=>`<option value="${n}" ${r.interval===n?'selected':''}>Cada ${n} minutos</option>`).join('')}</select><p class="setting-note">Como punto de partida puedes elegir 30 minutos. Ajusta según tu tolerancia y horario.</p></div><div class="setting-group"><label class="agent-checkbox"><input type="checkbox" id="scheduleToggle" ${r.scheduleEnabled?'checked':''}><span>Respetar mi horario laboral</span></label><div class="reminder-schedule-grid"><label for="scheduleStart">Desde<input id="scheduleStart" type="time" value="${r.start}"></label><label for="scheduleEnd">Hasta<input id="scheduleEnd" type="time" value="${r.end}"></label></div><label class="agent-checkbox"><input id="scheduleWeekdays" type="checkbox" ${r.weekdaysOnly?'checked':''}><span>Solo lunes a viernes</span></label><p class="setting-note">Los avisos esperan al siguiente horario permitido. Pausa debe estar abierta.</p></div><div class="settings-row"><div><strong>Jornada con recordatorios</strong><small>Funciona mientras la app está abierta</small></div><label class="toggle"><input type="checkbox" id="remindersToggle" aria-label="Activar recordatorios durante la jornada" ${r.enabled?'checked':''}><span></span></label></div><div class="settings-row"><div><strong>Notificaciones del navegador</strong><small id="permissionText">${typeof Notification==='undefined'?'No disponibles':Notification.permission==='granted'?'Permitidas':Notification.permission==='denied'?'Bloqueadas en el navegador':'Pedir autorización'}</small></div><button class="button secondary" data-action="permission" ${typeof Notification==='undefined'?'disabled':''}>${icon('bell',15)} Permitir</button></div><div class="setting-note">Los navegadores pueden pausar temporizadores en pestañas inactivas. No hay avisos garantizados con la app cerrada.</div></div>
+function settingsPage(){const r=state.reminders;return `<section class="page-head"><div class="eyebrow">TÚ DECIDES EL RITMO</div><h1>Un espacio a tu manera.</h1><p class="subheading">Tus preferencias y tu historial, guardados en este dispositivo.</p></section><div class="settings-grid"><div class="panel"><div class="panel-header"><span class="panel-icon">${icon('bell',20)}</span><div><h3>Recordatorios</h3><p class="panel-subtitle">Define cada cuánto necesitas cambiar de posición.</p></div></div><div class="setting-group"><label for="intervalInput">Frecuencia de las pausas</label><select id="intervalInput">${Core.VALID_INTERVALS.map(n=>`<option value="${n}" ${r.interval===n?'selected':''}>Cada ${n} minutos</option>`).join('')}</select><p class="setting-note">Como punto de partida puedes elegir 30 minutos. Ajusta según tu tolerancia y horario.</p></div><div class="setting-group"><label class="agent-checkbox"><input type="checkbox" id="scheduleToggle" ${r.scheduleEnabled?'checked':''}><span>Respetar mi horario laboral</span></label><div class="reminder-schedule-grid"><label for="scheduleStart">Desde<input id="scheduleStart" type="time" value="${r.start}"></label><label for="scheduleEnd">Hasta<input id="scheduleEnd" type="time" value="${r.end}"></label></div><label class="agent-checkbox"><input id="scheduleWeekdays" type="checkbox" ${r.weekdaysOnly?'checked':''}><span>Solo lunes a viernes</span></label><p class="setting-note">Los avisos esperan al siguiente horario permitido. Pausa debe estar abierta.</p></div><div class="settings-row"><div><strong>Jornada con recordatorios</strong><small>Funciona mientras la app está abierta</small></div><label class="toggle"><input type="checkbox" id="remindersToggle" aria-label="Activar recordatorios durante la jornada" ${r.enabled?'checked':''}><span></span></label></div><div class="settings-row"><div><strong>Notificaciones del navegador</strong><small id="permissionText">${typeof Notification==='undefined'?'No disponibles':Notification.permission==='granted'?'Permitidas':Notification.permission==='denied'?'Bloqueadas en el navegador':'Pedir autorización'}</small></div><button class="button secondary" data-action="permission" ${typeof Notification==='undefined'?'disabled':''}>${icon('bell',15)} Permitir</button></div><div class="settings-row"><div><strong>Probar un aviso</strong><small>Envía una prueba sin modificar tu próxima pausa.</small></div><button class="button secondary" data-action="test-notification" ${typeof Notification==='undefined'||Notification.permission!=='granted'?'disabled':''}>${icon('bell',15)} Probar aviso</button></div><div class="setting-note">Los navegadores pueden pausar temporizadores en pestañas inactivas. No hay avisos garantizados con la app cerrada.</div></div>
  <div><section class="panel" style="margin-bottom:20px"><div class="panel-header"><span class="panel-icon">${icon('lock',20)}</span><div><h3>Tu privacidad</h3><p class="panel-subtitle">El control de tus datos siempre es tuyo.</p></div></div><p class="setting-note">Tus sesiones y preferencias se guardan exclusivamente en el almacenamiento local del navegador. Borrar los datos del sitio también borra este historial.</p><div class="settings-row"><div><strong>Exportar mis datos</strong><small>Archivo JSON portable</small></div><button class="button secondary" data-action="export">${icon('download',16)} Exportar</button></div><div class="settings-row"><div><strong>Eliminar historial</strong><small>Acción irreversible</small></div><button class="button warning" data-action="clear-data">${icon('trash',16)} Borrar</button></div></section><div class="safety-box"><strong>${icon('warning',16)} Antes de empezar</strong>Ante dificultad para controlar vejiga o intestino, pérdida de sensibilidad genital/perineal o debilidad progresiva en las piernas, busca atención médica urgente. Si el dolor se irradia a una pierna o no mejora, consulta con un profesional.<p><button class="link-action" data-action="safety">Volver a revisar seguridad ${icon('arrow',13)}</button></p><a href="https://www.nhs.uk/conditions/back-pain/" target="_blank" rel="noopener noreferrer">Guía NHS sobre dolor lumbar ↗</a></div></div></div>`}
 function render(){const labels={agente:'Mi guía',inicio:'Inicio',rutinas:'Mis rutinas',biblioteca:'Biblioteca',actividad:'Mi actividad',ajustes:'Preferencias'};el('breadcrumbCurrent').textContent=labels[page]||'Inicio';el('todayDate').textContent=new Intl.DateTimeFormat('es-PE',{weekday:'long',day:'numeric',month:'long'}).format(new Date());
  const html=page==='agente'?window.PausaAgentUI.render():page==='inicio'?home():page==='rutinas'?routinesPage():page==='biblioteca'?libraryPage():page==='actividad'?activityPage():settingsPage();el('appContent').innerHTML=html;document.body.dataset.page=page;
@@ -97,23 +97,58 @@ function finishSession(){const s=state.session;if(!s)return;const r=ROUTINES.fin
 function showFinished(logId){const l=state.logs.find(x=>x.id===logId);if(!l)return;modal(`<div class="complete-mark">${icon('check',34)}</div><h2 class="finished-title" id="dialogTitle">¡Bien hecho, te moviste!</h2><p class="finished-copy">Completaste <b>${esc(l.name)}</b> · ${Core.formatElapsed(l.seconds)}. Una pausa más para tu bienestar.</p><div class="divider"></div><div class="setting-group"><label>Opcional: ¿cómo sientes la espalda después? (0–10)</label><div class="checkin-scale">${Array.from({length:11},(_,i)=>`<label><input name="afterPain" type="radio" value="${i}"><span>${i}</span></label>`).join('')}</div><p class="setting-note">Autorreporte subjetivo; estos valores no son un diagnóstico ni una medida de recuperación clínica.</p></div><div class="dialog-actions"><button class="button secondary" data-action="close-modal">Omitir</button><button class="button primary" data-action="save-after" data-id="${l.id}">Guardar y finalizar ${icon('check',15)}</button></div>`)}
 function toggleReminders(enabled){state.reminders.enabled=enabled;state.reminders.pending=false;state.reminders.nextDueAt=enabled?Core.nextAllowedReminder(now()+state.reminders.interval*60000,state.reminders):0;persist();el('toastRoot').innerHTML='';render();notifyToast(enabled?'Recordatorios activados':'Jornada detenida',enabled?`Te avisaré cada ${state.reminders.interval} minutos mientras la app esté abierta.`:'Puedes volver a activarlos cuando quieras.')}
 function snooze(){state.reminders.pending=false;state.reminders.nextDueAt=Core.nextAllowedReminder(now()+10*60000,state.reminders);state.reminders.enabled=true;persist();el('toastRoot').innerHTML='';render();notifyToast('Pausa pospuesta','Volveré a recordártelo en 10 minutos, si la app sigue abierta.')}
-function showSystemReminder(){
- const title='Pausa · Es momento de moverte';
- const options={body:'Puedes moverte sentado o ponerte de pie si lo prefieres.',icon:'assets/icon-192.png',tag:'pausa-reminder'};
- const fallback=()=>{try{new Notification(title,options)}catch{}};
+function showSystemReminder(test=false){
+ if(typeof Notification==='undefined'||Notification.permission!=='granted')return Promise.resolve(false);
+ const title=test?'Pausa · Notificación de prueba':'Pausa · Es momento de moverte';
+ const options={
+  body:test?'Comprueba que puedes ver este aviso y volver a Pausa al pulsarlo.':'Puedes moverte sentado o ponerte de pie si lo prefieres.',
+  icon:'assets/icon-192.png',tag:test?'pausa-notification-test':'pausa-reminder'
+ };
+ const fallback=()=>{try{new Notification(title,options);return true}catch{return false}};
  if('serviceWorker'in navigator&&typeof navigator.serviceWorker.getRegistration==='function'){
-  navigator.serviceWorker.getRegistration().then(reg=>{
-   if(reg&&typeof reg.showNotification==='function')return reg.showNotification(title,options).catch(fallback);
-   fallback();
+  return navigator.serviceWorker.getRegistration().then(reg=>{
+   if(reg&&typeof reg.showNotification==='function')return reg.showNotification(title,options).then(()=>true).catch(fallback);
+   return fallback();
   }).catch(fallback);
- }else fallback();
+ }
+ return Promise.resolve(fallback());
+}
+let reminderClaimInFlight=false;
+function claimDueReminder(){
+ let snapshot;
+ try{snapshot=JSON.parse(localStorage.getItem(STORAGE)||'null')}catch{}
+ const r=Core.normalize({reminders:snapshot?.reminders||state.reminders}).reminders;
+ state.reminders=r;
+ const moment=now();
+ if(!r.enabled||r.pending||r.nextDueAt<=0||r.nextDueAt>moment)return;
+ const allowed=Core.nextAllowedReminder(moment,r);
+ const due=allowed<=moment;
+ if(due)r.pending=true;else r.nextDueAt=allowed;
+ if(snapshot&&typeof snapshot==='object'){
+  snapshot.reminders=r;
+  try{localStorage.setItem(STORAGE,JSON.stringify(snapshot))}catch{persist()}
+ }else persist();
+ if(!due){if(page==='inicio')render();return}
+ if(!state.session){render();notifyToast('Es momento de una pausa','Llevas un rato trabajando. Puedes moverte suavemente sin levantarte.',true)}
+ else notifyToast('Una pausa pendiente','Termina tu sesión; los recordatorios se reiniciarán.',false);
+ if(typeof Notification!=='undefined'&&Notification.permission==='granted'&&now()-lastDueNotificationAt>60000){
+  lastDueNotificationAt=now();showSystemReminder();
+ }
+}
+function coordinateDueReminder(){
+ if(reminderClaimInFlight)return;
+ reminderClaimInFlight=true;
+ const locks=navigator.locks;
+ let operation;
+ try{
+  operation=locks?.request?locks.request('pausa-reminder-claim',{ifAvailable:true},lock=>{if(lock)claimDueReminder()}):Promise.resolve().then(claimDueReminder);
+ }catch{operation=Promise.resolve().then(claimDueReminder)}
+ Promise.resolve(operation).catch(()=>{}).finally(()=>{reminderClaimInFlight=false});
 }
 function nextTick(){const s=state.session;
  if(s&&!s.paused){const left=Math.max(0,Math.ceil((s.endAt-now())/1000));const countdown=el('sessionTimer');if(countdown)countdown.textContent=Core.formatClock(left);if(left<=0)advanceSession()}
  const r=state.reminders;
- if(r.enabled&&!r.pending&&r.nextDueAt<=now()&&r.nextDueAt>0){const allowed=Core.nextAllowedReminder(now(),r);if(allowed>now()){r.nextDueAt=allowed;persist();return;}r.pending=true;persist();if(!s){render();notifyToast('Es momento de una pausa','Llevas un rato trabajando. Puedes moverte suavemente sin levantarte.',true)}else{notifyToast('Una pausa pendiente','Termina tu sesión; los recordatorios se reiniciarán.',false)}
-  if(typeof Notification!=='undefined'&&Notification.permission==='granted'&&now()-lastDueNotificationAt>60000){lastDueNotificationAt=now();showSystemReminder();}
- }
+ if(r.enabled&&!r.pending&&r.nextDueAt<=now()&&r.nextDueAt>0)coordinateDueReminder();
  if(page==='inicio'){const count=el('countdown');if(count&&r.enabled){count.textContent=r.pending?'00:00':Core.formatClock(Math.ceil((r.nextDueAt-now())/1000))}}
 }
 function exportData(){const payload={app:'Pausa',version:1,exportedAt:new Date().toISOString(),logs:state.logs,reminders:{interval:state.reminders.interval}};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`pausa-datos-${Core.dateKey(now())}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2500)}
@@ -146,6 +181,9 @@ function handleAction(button){const action=button.dataset.action;switch(action){
  case 'snooze':snooze();break;
  case 'close-toast':el('toastRoot').innerHTML='';break;
  case 'permission':if(typeof Notification!=='undefined'){Notification.requestPermission().then(value=>{render();notifyToast(value==='granted'?'Avisos permitidos':'Avisos no permitidos',value==='granted'?'Verás avisos si la app permanece abierta.':'Puedes cambiar los permisos desde tu navegador.')}).catch(()=>notifyToast('Permiso no disponible','Comprueba que la app se sirva por HTTPS o localhost.'))}break;
+ case 'test-notification':showSystemReminder(true).then(sent=>{
+  notifyToast(sent?'Aviso de prueba enviado':'No se pudo mostrar el aviso',sent?'Comprueba las notificaciones de tu sistema y pulsa el aviso para volver a Inicio.':'Revisa los permisos y ajustes de notificaciones del navegador y de Windows.');
+ });break;
  case 'export':exportData();notifyToast('Descarga iniciada','El archivo contiene tu historial local de sesiones.');break;
  case 'clear-data':if(window.confirm('¿Eliminar TODAS las sesiones registradas? Esta acción no se puede deshacer.')){state.logs=[];persist();render();notifyToast('Historial eliminado','Tu configuración de recordatorios se conservó.')}break;
  default:break;
@@ -163,9 +201,21 @@ document.addEventListener('change',event=>{if(event.target.id==='librarySide'){l
  }});
 document.addEventListener('keydown',event=>{if(event.key==='Tab'&&activeModal){const nodes=[...el('modalRoot').querySelectorAll('button:not(:disabled),input:not(:disabled),select,textarea,a[href]')].filter(n=>n.getClientRects().length);const first=nodes[0],last=nodes[nodes.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}}if(event.key==='Escape'&&activeModal){if(window.PausaAgentUI?.isSessionActive()){window.PausaAgentUI.end();return}if(state.session)exitSession();else closeModal()}});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)nextTick()});
-window.addEventListener('storage',event=>{if(event.key===STORAGE){try{state=Core.normalize(JSON.parse(event.newValue||'null'));render()}catch{}}});
+window.addEventListener('storage',event=>{if(event.key===STORAGE){try{
+ const latest=Core.normalize(JSON.parse(event.newValue||'null'));
+ state.reminders=latest.reminders;state.logs=latest.logs;state.safety=latest.safety;
+ if(!state.session)state.session=latest.session;
+ render();
+}catch{}}});
 if(state.safety==='urgent'&&state.session){state.session=null;persist();}if(page==='agente')page='inicio';render();if(state.session){notifyToast('Tienes una sesión pendiente','Puedes continuar desde donde la dejaste.');el('toastRoot').querySelector('.toast-actions')?.remove();const holder=el('toastRoot').querySelector('.toast>div:nth-child(2)');if(holder)holder.insertAdjacentHTML('beforeend','<div class="toast-actions"><button data-action="resume">Reanudar sesión</button><button data-action="discard-session" class="subtle">Descartar</button></div>')}
 window.addEventListener('click',event=>{const action=event.target.closest('[data-action]');if(!action)return;if(action.dataset.action==='resume'){el('toastRoot').innerHTML='';showSession()}else if(action.dataset.action==='discard-session'){state.session=null;persist();el('toastRoot').innerHTML='';render()}});
+if('serviceWorker'in navigator){
+ navigator.serviceWorker.addEventListener('message',event=>{
+  if(event.data?.type!=='pausa-reminder-open')return;
+  setPage('inicio');
+  if(state.reminders.pending)notifyToast('Tu pausa está lista','Puedes empezar ahora o posponerla diez minutos.',true);
+ });
+}
 setInterval(nextTick,1000);nextTick();
 if('serviceWorker'in navigator&&location.protocol!=='file:'){
  navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(reg=>{

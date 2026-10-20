@@ -17,3 +17,7 @@ El usuario detectó en el RC que Pausa sentado mostraba imágenes legadas. El ca
 ## Ajuste de exactitud del historial tras QA manual (2026-10-19)
 
 Una captura del usuario, confirmada sobre el commit d411187, demostró que una sesión de 145 segundos figuraba como «2 min» en el resumen y «3 min» en la actividad. El origen era Math.round en sumMinutes frente a Math.ceil en duration. La UI de actividad y el modal de finalización muestran ahora el **tiempo realmente registrado** (minutos y segundos), sin mutar los logs originales; la duración de rutina planificada sigue siendo aproximada. El gráfico semanal utiliza segundos exactos y conserva el valor antiguo minutes para compatibilidad. Se ajustó también el singular «1 sesión completada»/«1 día» y se añadieron pruebas de regresión.
+
+## G04/G05 — endurecimiento de avisos y PWA
+
+Se coordina reclamación de vencimientos mediante Web Locks cuando el navegador lo soporta; los demás navegadores usan un fallback best-effort, sin garantizar ausencia absoluta de duplicados. La sincronización de storage respeta las sesiones activas de otra pestaña, y las notificaciones pueden abrir/enfocar Inicio. Nuevas pruebas SW de instalación, GIF precargados y uso offline; pendiente navegador real. Se corrigió además el estado de horarios al instalar desde cero y se añadieron validaciones de rango invertido. No incorpora push remoto ni notificaciones cuando Pausa está cerrada.

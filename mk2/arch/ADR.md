@@ -8,3 +8,7 @@
 6. Diferenciar Pausa Individual de Teams; cualquier supervisión empresarial debe proteger información personal, ser voluntaria y restringirse a estadísticas agregadas.
 7. Android nativo es una investigación futura; Native SDK de Railly no se promueve como solución móvil.
 8. Despliegue independiente después de pruebas; el sitio v1.11 de Cloudflare Pages permanece intacto durante review.
+
+## G05: coordinación de notificaciones entre pestañas (2026-10-19)
+
+El recordatorio utiliza ahora una reclamación idempotente del estado pendiente: antes de notificar lee el estado compartido y marca `pending`. En navegadores con Web Locks se serializa la reclamación mediante un lock de origen; en navegadores sin Web Locks permanece un fallback best-effort mediante localStorage, **sin garantía absoluta de exclusión simultánea**. Los cambios de otra pestaña no fuerzan a pausar una sesión ya activa. La notificación del SW envía un mensaje a la pestaña recuperada para llevar la UI a Inicio. Ninguna de estas medidas crea notificaciones con la app cerrada.

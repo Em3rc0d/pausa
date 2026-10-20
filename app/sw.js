@@ -68,7 +68,11 @@ self.addEventListener('notificationclick',event=>{
  event.waitUntil((async()=>{
   const windows=await self.clients.matchAll({type:'window',includeUncontrolled:true});
   const target=windows.find(w=>new URL(w.url).origin===self.location.origin);
-  if(target){await target.focus();return;}
+  if(target){
+   await target.focus();
+   target.postMessage({type:'pausa-reminder-open'});
+   return;
+  }
   await self.clients.openWindow('./#inicio');
  })());
 });

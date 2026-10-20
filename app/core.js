@@ -22,11 +22,12 @@
  const formatClock=(seconds)=>{const s=Math.max(0,Math.floor(Number(seconds)||0));return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`};
  const fromMinutes=(seconds)=>Math.round((Number(seconds)||0)/60);
  function validLog(log){return log&&typeof log==='object'&&typeof log.id==='string'&&typeof log.at==='number'&&Number.isFinite(log.at)&&log.at>0&&log.at<Date.now()+86400000&&typeof log.seconds==='number'&&Number.isFinite(log.seconds)&&log.seconds>=1&&log.seconds<=7200&&typeof log.name==='string'&&log.name.length<=100}
- function normalize(raw){const base={version:1,reminders:{enabled:false,interval:30,nextDueAt:0,pending:false},logs:[],safety:'unset',session:null};
+ function normalize(raw){const base={version:1,reminders:{enabled:false,interval:30,nextDueAt:0,pending:false,scheduleEnabled:false,start:'09:00',end:'18:00',weekdaysOnly:true},logs:[],safety:'unset',session:null};
   if(!raw||typeof raw!=='object')return base;
   const r=raw.reminders&&typeof raw.reminders==='object'?raw.reminders:{};
   base.reminders={enabled:r.enabled===true,interval:VALID_INTERVALS.includes(Number(r.interval))?Number(r.interval):30,nextDueAt:Number.isFinite(r.nextDueAt)&&r.nextDueAt>0?r.nextDueAt:0,pending:r.pending===true,scheduleEnabled:r.scheduleEnabled===true,start:validClock(r.start)?r.start:'09:00',end:validClock(r.end)?r.end:'18:00',weekdaysOnly:r.weekdaysOnly!==false};
-  if(base.reminders.enabled&&!base.reminders.nextDueAt)base.reminders.nextDueAt=Date.now()+base.reminders.interval*60000;
+  if(minutesOf(base.reminders.start)>=minutesOf(base.reminders.end)){base.reminders.start='09:00';base.reminders.end='18:00'}
+  if(base.reminders.enabled&&!base.reminders.nextDueAt)base.reminders.nextDueAt=nextAllowedReminder(Date.now()+base.reminders.interval*60000,base.reminders);
   base.logs=Array.isArray(raw.logs)?raw.logs.filter(validLog).slice(-1000):[];
   base.safety=['unset','ok','caution','urgent'].includes(raw.safety)?raw.safety:'unset';
   const s=raw.session;

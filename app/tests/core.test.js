@@ -29,3 +29,12 @@ test('el tiempo transcurrido se presenta exactamente y no se redondea contradict
  assert.equal(C.formatElapsed(3605),'1 h 5 s');
  assert.equal(C.formatElapsed(0),'0 min');
 });
+
+test('instalación limpia inicia con horas válidas y una ventana desactivada',()=>{
+ const fresh=C.normalize(null);
+ assert.deepEqual(fresh.reminders,{enabled:false,interval:30,nextDueAt:0,pending:false,scheduleEnabled:false,start:'09:00',end:'18:00',weekdaysOnly:true});
+ const invalid=C.normalize({reminders:{enabled:true,interval:25,start:'21:00',end:'09:00',scheduleEnabled:true}});
+ assert.equal(invalid.reminders.start,'09:00');
+ assert.equal(invalid.reminders.end,'18:00');
+ assert.equal(invalid.reminders.scheduleEnabled,true);
+});

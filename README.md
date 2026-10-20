@@ -8,7 +8,7 @@ Pausas de movilidad para quienes pasan horas frente a una pantalla. Puedes mover
 
 - Aplicación web estática/PWA en español: Inicio, Mi guía, Rutinas, Ejercicios, Actividad y Ajustes.
 - Recordatorios configurables mientras Pausa permanece abierta; reproductor con pausa, siguiente y salida.
-- Cuatro rutinas existentes, catálogo inicial de 11 movimientos y biblioteca adicional de **112 GIF con sus 112 pósteres originales**.
+- Cinco rutinas (incluida Pausa sentado, sin IA), catálogo inicial de 11 movimientos de MK1 más los nuevos movimientos sentados y biblioteca adicional de **112 GIF con sus 112 pósteres originales**.
 - Guía con inferencia local: el Transformer decide primero la cantidad y después selecciona y ordena exactamente esos movimientos del catálogo.
 - **Propuesta del modelo:** cantidad variable, sin una cuota universal de tres. **Pausa ágil:** hasta tres movimientos, indicado antes de generar y en el resultado.
 - Posición, exclusiones, familias, cobertura y formato comprobados fuera del modelo. Puedes omitir movimientos y pedir otra combinación.
@@ -37,6 +37,7 @@ La primera composición descarga aproximadamente **512 MB de pesos q8**, además
 |---|---|
 | [mk0/](mk0/README.md) | Problema, alternativas, viabilidad, decisiones y límites. Reconstrucción documental de la fase inicial; validación comercial pendiente. |
 | [mk1/](mk1/README.md) | Contrato de la PWA v1.11.0, UX, arquitectura, plan, código y evidencia. |
+| [mk2/](mk2/README.md) | Release candidate v1.12.0, piloto CS-04, accesibilidad G06 y gates de beta/comercialización. |
 | [app/](app/README.md) | Única copia ejecutable del código, medios, pruebas y documentación histórica del producto. |
 | [quarries/](quarries/README.md) | Síntesis de fuentes, procedencia y qué conclusión permite cada fuente. |
 | [mining-site/](mining-site/README.md) | Registro de investigación/extracción y límites de evidencia. |
@@ -56,6 +57,10 @@ Lee [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md) y [SECURITY.md](S
 
 ## MK2: preparación de lanzamiento 1.12.0
 
-La rama de desarrollo incluye una rutina inmediata de **Pausa sentado** (145 s; alcance de brazos, talones, inclinación lateral del tronco), sin descarga de IA, y ventanas de horario laboral opcionales para los recordatorios. La guía avanzada sigue utilizando un modelo descargable de aproximadamente 512 MB. Los avisos **no están garantizados con Pausa cerrada**.
+El código de v1.12.0 incluye una rutina inmediata de **Pausa sentado** (145 s; alcance de brazos, talones, inclinación lateral del tronco), sin descarga de IA, y ventanas de horario laboral opcionales para los recordatorios. La guía avanzada sigue utilizando un modelo descargable de aproximadamente 512 MB. Los avisos **no están garantizados con Pausa cerrada**.
 
-Consulta [MK2](mk2/README.md) y sus [gates de salida](mk2/plan/RELEASE-GATES.md). El sitio publicado continúa con v1.11.0 hasta un despliegue autorizado y verificado. **No hay cobros, suscripciones, Play Store ni validación clínica o comercial cerrados.**
+Consulta [MK2](mk2/README.md) y sus [gates de salida](mk2/plan/RELEASE-GATES.md). La versión que sirve Cloudflare Pages debe comprobarse en el sitio desplegado: fusionar a `main` no demuestra una publicación o actualización exitosa. **No hay cobros, suscripciones, Play Store ni validación clínica o comercial cerrados.**
+
+## Integración de ingeniería (octubre de 2026)
+
+El desarrollo MK2 incorpora el piloto [CS-04](mk2/test/PILOT-001-CS04.md) y la revisión [G06 de contraste](mk2/test/G06-CONTRAST-REVIEW-2026-10-19.md). La suite del piloto tuvo **69/69 PASS y verificación de repositorio PASS sobre el commit `dcf760b5`**; después se añadieron cambios de contraste a la integración. La suite combinada y la validación real de accesibilidad quedan pendientes; consultar [gates](mk2/plan/RELEASE-GATES.md). La integración de código no constituye GO de beta ni habilita ventas.

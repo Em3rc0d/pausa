@@ -1,6 +1,6 @@
 # MK2 — Readiness comercial de Pausa
 
-Estado: RELEASE CANDIDATE v1.12.0, no production GO. Inicio 2026-10-19. MK0 y MK1 quedan intactos.
+Estado a 2026-10-22: **entrega técnica v1.12.0 cerrada y publicada como demostración gratuita; NO-GO de beta certificada ni lanzamiento comercial**. Inicio 2026-10-19. MK0 y MK1 quedan intactos. La suite del código integrado se aprobó en main (69/69 PASS) y se verificaron 18 recorridos de navegación en Chromium. El cierre no convierte G04–G09 en gates aprobados. Consulta [acta de cierre](../PROJECT-CLOSURE-2026-10-22.md) y [smoke de producción](test/BROWSER-SMOKE-2026-10-22.md).
 
 Objetivo: recordatorios no invasivos y pausas voluntarias de movimiento, incluidas rutinas que se hacen sentado, sin obligar a descargar IA. No diagnostica ni garantiza prevención o tratamiento de lesiones.
 
@@ -25,5 +25,5 @@ MK2 no incluye cobros, suscripciones, cuentas, Android, push persistente, valida
 ## Incorporaciones CS-04 y G06
 
 - [PILOT-001, CS-04](test/PILOT-001-CS04.md): siete valores de Actividad accesibles, notificaciones de frecuencia con texto fiel al horario y pruebas offline complementarias. La rama exacta evaluada aprobó 69/69 pruebas Node y el verificador del repositorio.
-- [Contraste G06](test/G06-CONTRAST-REVIEW-2026-10-19.md): color secundario y prueba ampliada de ratio sobre cinco fondos; verificación matemática y V8 específica, con suite nativa de la combinación pendiente.
+- [Contraste G06](test/G06-CONTRAST-REVIEW-2026-10-19.md): color secundario y prueba ampliada de ratio sobre cinco fondos; verificación matemática y V8 específica; posteriormente la suite nativa del código combinado pasó 69/69 en main. G06 sigue pendiente de validación asistiva/profesional.
 - [Matriz de evidencia](test/RELEASE-MATRIX.md) y [gates](plan/RELEASE-GATES.md): no atribuir los PASS de una revisión a otra sin pruebas. G04/G05 siguen parciales, G06 no equivale a certificación clínica o WCAG.

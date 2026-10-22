@@ -1,6 +1,6 @@
 # Pausa ✳
 
-> **Estado del proyecto — 22-10-2026:** entrega técnica **v1.12.0 cerrada y congelada** como demostración web/PWA gratuita, publicada en Cloudflare Pages. Suite de código integrado **69/69 PASS**; smoke real de Chromium **18/18 rutas responsive** y flujo completo de «Pausa sentado» PASS. **NO-GO para beta formal, certificación de accesibilidad/clínica ni ventas**: G04–G06 conservan validaciones parciales y G07–G09 no están cerrados. Este estado no autoriza promesas clínicas. Véase [acta de cierre](PROJECT-CLOSURE-2026-10-22.md) y [evidencia del navegador](mk2/test/BROWSER-SMOKE-2026-10-22.md). Las notas históricas siguientes pueden referirse al estado de versiones anteriores.
+> **Estado del proyecto — 22-10-2026 (MK2 entregado; MK3 preparado, aún HOLD):** entrega técnica **v1.12.0 cerrada y congelada** como demostración web/PWA gratuita, publicada en Cloudflare Pages. Suite de código integrado **69/69 PASS**; smoke real de Chromium **18/18 rutas responsive** y flujo completo de «Pausa sentado» PASS. **NO-GO para beta formal, certificación de accesibilidad/clínica ni ventas**: G04–G06 conservan validaciones parciales y G07–G09 no están cerrados. Este estado no autoriza promesas clínicas. Véase [acta de cierre](PROJECT-CLOSURE-2026-10-22.md) y [evidencia del navegador](mk2/test/BROWSER-SMOKE-2026-10-22.md). Las notas históricas siguientes pueden referirse al estado de versiones anteriores.
 
 
 Pausas de movilidad para quienes pasan horas frente a una pantalla. Puedes moverte sentado, permitir movimientos de pie o habilitar una superficie de suelo, según tu espacio y tus preferencias.
@@ -41,6 +41,7 @@ La primera composición descarga aproximadamente **512 MB de pesos q8**, además
 | [mk0/](mk0/README.md) | Problema, alternativas, viabilidad, decisiones y límites. Reconstrucción documental de la fase inicial; validación comercial pendiente. |
 | [mk1/](mk1/README.md) | Contrato de la PWA v1.11.0, UX, arquitectura, plan, código y evidencia. |
 | [mk2/](mk2/README.md) | Release candidate v1.12.0, piloto CS-04, accesibilidad G06 y gates de beta/comercialización. |
+| [mk3/](mk3/README.md) | **Validación independiente en preparación:** preflight G03–G06, instrumentos de piloto de 14 días y decisión GO/PIVOT/KILL. **Sin reclutamiento iniciado.** |
 | [app/](app/README.md) | Única copia ejecutable del código, medios, pruebas y documentación histórica del producto. |
 | [quarries/](quarries/README.md) | Síntesis de fuentes, procedencia y qué conclusión permite cada fuente. |
 | [mining-site/](mining-site/README.md) | Registro de investigación/extracción y límites de evidencia. |

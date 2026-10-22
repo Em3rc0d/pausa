@@ -16,3 +16,13 @@
 GO beta web limitado requiere G02–G06. GO venta real requiere G02–G09 y decisión expresa del propietario. No confundir presencia de tests o despliegue exitoso con certificación de producto.
 
 **Separación de estados:** integrar código en `main` no equivale a desplegar Pages, aprobar beta ni habilitar monetización. G04/G05 conservan aceptación parcial de las pruebas manuales previas, sin revalidación innecesaria. La actualización SW/cuota, vencimiento y suspensión, accesibilidad real y evaluación clínica siguen abiertas.
+
+
+## Disposición de cierre técnico — 22-10-2026
+
+El propietario solicitó finalizar la iteración v1.12.0 sin prolongar el desarrollo por inercia. **Se cierra el alcance de ingeniería, no se declaran superados los gates pendientes.** La aplicación gratuita sigue publicada como demostración sin monetización.
+
+- Evidencia adicional: [smoke Chromium remoto en producción](../test/BROWSER-SMOKE-2026-10-22.md), **18/18 vistas (6 rutas × 3 viewports: 360, 768, 1280)** sin overflow horizontal y sin nombres vacíos detectados en enlaces/botones visibles; flujo `Pausa sentado` completo, prechequeo→registro de 11 s. Esto **refuerza G03**, pero no constituye E2E exhaustivo ni accesibilidad asistiva.
+- Evidencia del despliegue: Cloudflare Pages producción `e4568010-190c-4ee5-a66b-40c657e21808` con status `success` (19-10-2026 22:31 Lima), commit `6d403180` (solo documentación posterior al SHA de código probado `2b70b65`).
+- **G04 y G05 siguen PARCIALES. G06 sigue PARCIAL. G07–G09 NO CERRADOS; G10 futuro/fuera de esta versión. No hay GO beta ni comercial.**
+- Se congela la versión técnica v1.12.0. Excepciones de reapertura: defecto grave, exigencia de revisión profesional o nueva decisión validada. Véase [acta de cierre](../../PROJECT-CLOSURE-2026-10-22.md).

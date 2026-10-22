@@ -25,6 +25,8 @@ Se navegó, mediante el control `data-nav`, entre Inicio, Mi guía, Rutinas, Bib
 
 En la portada móvil 360 también se observaron 6 elementos `img` sin fallos de carga en el momento de captura. **No** se han descargado ni revisado visualmente los 112 medios de Biblioteca en este ensayo. Los controles de tipo radio/range visibles pueden tener dimensiones nativas pequeñas; este script no califica por sí solo el tamaño táctil efectivo de sus etiquetas.
 
+**Precisión del método:** los 18 recorridos de la tabla se dispararon mediante controles `data-nav` del sidebar, incluso cuando éste no era visible en 360 px. Se realizó además una **prueba específica de la barra inferior móvil visible** (`.mobile-nav [data-nav]`) a 360 × 800: Inicio, Mi guía, Rutinas, Ejercicios, Actividad y Ajustes **6/6 PASS**; los seis controles eran visibles, mostraron encabezado y no provocaron desbordamiento horizontal. Se trató de clicks programáticos en Chromium, no de interacción táctil humana.
+
 ## Recorrido funcional guiado (móvil emulado 360 px)
 
 1. Pulsar la CTA `Hacer una pausa` de `Pausa sentado` en un contexto limpio.

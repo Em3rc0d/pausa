@@ -1,5 +1,8 @@
 # Pausa ✳
 
+> **Estado del proyecto — 22-10-2026:** entrega técnica **v1.12.0 cerrada y congelada** como demostración web/PWA gratuita, publicada en Cloudflare Pages. Suite de código integrado **69/69 PASS**; smoke real de Chromium **18/18 rutas responsive** y flujo completo de «Pausa sentado» PASS. **NO-GO para beta formal, certificación de accesibilidad/clínica ni ventas**: G04–G06 conservan validaciones parciales y G07–G09 no están cerrados. Este estado no autoriza promesas clínicas. Véase [acta de cierre](PROJECT-CLOSURE-2026-10-22.md) y [evidencia del navegador](mk2/test/BROWSER-SMOKE-2026-10-22.md). Las notas históricas siguientes pueden referirse al estado de versiones anteriores.
+
+
 Pausas de movilidad para quienes pasan horas frente a una pantalla. Puedes moverte sentado, permitir movimientos de pie o habilitar una superficie de suelo, según tu espacio y tus preferencias.
 
 [**Abrir Pausa**](https://pausa-homeoffice.pages.dev/) · [Documentación MK1](mk1/README.md) · [Arquitectura](mk1/arch/ARCHITECTURE.md) · [Contrato de selección](app/SELECTION-SPEC.md)

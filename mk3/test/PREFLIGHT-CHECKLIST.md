@@ -10,10 +10,10 @@
 | ID | Escenario (pasos resumidos) | Aceptación | Estado |
 |---|---|---|---|
 | Q01 | Win/Chrome 360-1280: portada → seguridad → rutina sentado → actividad, con uso real | flujo comprensible, movimiento y tiempo correctos | **PASS parcial** solo Chromium remoto / QA previo Windows |
-| Q02 | Chrome y Firefox, teclado físico Tab/Shift+Tab/Enter/Escape en portada, filtros, ajustes | sin trampa, foco visible, funcionamiento equivalente | NOT RUN |
+| Q02 | Chrome y Firefox, teclado físico Tab/Shift+Tab/Enter/Escape en portada, filtros, ajustes | sin trampa, foco visible, funcionamiento equivalente | **EJECUTADO SEGÚN USUARIO (Chrome)**; resultado detallado y Firefox PENDIENTES |
 | Q03 | Modal de seguridad, rutina, finalización: foco inicial, Tab cíclico, Escape, retorno al activador | foco permanece dentro y retorna correctamente, lectores anuncian título y pasos | NOT RUN |
-| Q04 | NVDA+Chrome/Firefox (o lector equivalente) en 6 secciones, formularios y actividad | nombres/roles/estados y semana comprensibles sin imagen | NOT RUN |
-| Q05 | 320 px, zoom 200% y 400%; texto espaciado, reducido movimiento | sin pérdida de información ni controles imposibles de usar | NOT RUN |
+| Q04 | NVDA+Chrome/Firefox (o lector equivalente) en 6 secciones, formularios y actividad | nombres/roles/estados y semana comprensibles sin imagen | **EJECUTADO SEGÚN USUARIO (prechequeo, rutinas, historial)**; resultado concreto y demás secciones PENDIENTES |
+| Q05 | 320 px, zoom 200% y 400%; texto espaciado, reducido movimiento | sin pérdida de información ni controles imposibles de usar | **EJECUTADO SEGÚN USUARIO (zoom 200 %/400 %)**; sin detalles de incidencias, 320px y movimiento reducido PENDIENTES |
 | Q06 | Contraste **calculado en navegador** sobre texto esencial, errores, foco, estados deshabilitados | criterios WCAG 2.2 pertinentes; no generalizar CSS token | NOT RUN |
 | Q07 | Instalar PWA en Windows + Android real; habilitar/salir/volver/recargar | instalación y preferencias conservadas donde sea compatible | **PASS parcial** Windows previo; Android NOT RUN |
 | Q08 | Service Worker v1.11 → v1.12 en **mismo origen controlado** (prueba segura local/preview) | actualización predecible sin pantalla en blanco ni datos perdidos | NOT RUN |
@@ -26,6 +26,10 @@
 | Q15 | Profesional de rehabilitación revisa **todos** los movimientos, secuencias y claims accesibles | autorización por unidad, correcciones/retiradas y firma | **BLOCKED: no reviewer** |
 | Q16 | Consentimiento independiente, baja, custodio privado y mecanismo de borrado ensayado | no se filtra contacto ni respuestas individuales en GitHub | **BLOCKED: sin responsable/canal** |
 | Q17 | Smoke privacidad/servicios: ningún tracker de estudio añadido a app | arquitectura local-first intacta; no recolectar por defecto | PASS de diseño; verificación de ejecución de piloto pendiente |
+
+## Avance autorreportado del propietario, 22-10-2026
+
+El propietario marcó como completadas las pruebas de teclado Chrome (Tab/Shift+Tab/Escape), NVDA en prechequeo/rutinas/historial y zoom 200 %/400 %. **No comunicó todavía resultados PASS/FAIL ni incidencias específicas**, por lo que se guardaron como **ejecución declarada, aceptación pendiente** en [recibo propietario](OWNER-QA-SELF-REPORT-2026-10-22.md). El issue #11 permanece abierto; no se debe repetir por defecto lo que ya hizo, sino concretar resultados y omisiones.
 
 ## Cómo probar G04 sin contaminar producción
 Un alias de Cloudflare Pages con diferente hostname **no prueba un upgrade del mismo Service Worker**, por la separación de origen/scope. Usar ambiente efímero HTTPS **en un solo origen** sirviendo secuencialmente v1.11 y v1.12, o localhost aislado con los dos árboles; preservar copia de configuración y probar histórico. No degradar la PWA pública para ensayar. No usar GitHub Actions.

@@ -18,7 +18,7 @@
 | Q07 | Instalar PWA en Windows + Android real; habilitar/salir/volver/recargar | instalación y preferencias conservadas donde sea compatible | **PASS parcial** Windows previo; Android NOT RUN |
 | Q08 | Service Worker v1.11 → v1.12 en **mismo origen controlado** (prueba segura local/preview) | actualización predecible sin pantalla en blanco ni datos perdidos | NOT RUN |
 | Q09 | Offline con shell y GIF precargados; red ausente; después recuperación tras error/almacenamiento insuficiente | degradación explicada sin bloquear funciones esenciales ni corromper historial | **PASS parcial** offline básico Windows; cuota/recovery NOT RUN |
-| Q10 | Permiso denegado, después revocado; app sigue permitiendo sesiones | sin error fatal ni prometer aviso garantizado | NOT RUN |
+| Q10 | Permiso denegado, después revocado; app sigue permitiendo sesiones | sin error fatal ni prometer aviso garantizado | **PASS AUTORREPORTADO para prueba de bloqueo con funcionamiento normal** («Funcionando todo», 22-10-2026); restauración de permiso sin recibo desglosado |
 | Q11 | Aviso al vencimiento verdadero en 2 pestañas con horario activo | una sola reclamación de vencimiento donde soportado; estado consistente | NOT RUN |
 | Q12 | Suspender PC/app al vencer horario, reanudar y volver a foco | comportamiento real registrado; copy no promete notificación garantizada | NOT RUN |
 | Q13 | Cambiar zona/DST/horario; revisar próximo aviso y límites | sin duplicados críticos, sin afirmaciones temporales falsas | NOT RUN |
@@ -30,6 +30,10 @@
 ## Avance autorreportado del propietario, 22-10-2026
 
 El propietario marcó como completadas las pruebas de teclado Chrome (Tab/Shift+Tab/Escape), NVDA en prechequeo/rutinas/historial y zoom 200 %/400 %. **Confirmó posteriormente «Sin problema alguno»**: se registran como **PASS AUTORREPORTADO para el alcance declarado**, sin inferir cobertura de subcasos adicionales en [recibo propietario](OWNER-QA-SELF-REPORT-2026-10-22.md). El issue #11 permanece abierto; no se debe repetir por defecto lo que ya hizo, sino concretar resultados y omisiones.
+
+## Confirmación general del propietario (22-10-2026)
+
+Tras recibir los pasos prácticos para **G05 Q10 (notificaciones bloqueadas)**, **G05 Q11 (vencimiento de 25 minutos con dos pestañas)** y **G04 offline opcional**, el propietario respondió: «Funcionando todo!». Esta frase se registra como **ausencia de fallos reportados**, y permite dar **PASS autorreportado acotado al control de bloqueo Q10**, que fue el primer paso solicitado expresamente. **No se atribuye todavía PASS a Q11**, porque la frase no identifica si transcurrieron los 25 minutos, si apareció un único aviso de sistema ni si ambas pestañas compartieron el estado. **Q09 mantiene el PASS histórico** de MK2; no se presume nueva repetición. Se solicita únicamente confirmar el alcance temporal de Q11, sin repetir lo ya ejecutado. El gate G05 sigue PARCIAL.
 
 ## Cómo probar G04 sin contaminar producción
 Un alias de Cloudflare Pages con diferente hostname **no prueba un upgrade del mismo Service Worker**, por la separación de origen/scope. Usar ambiente efímero HTTPS **en un solo origen** sirviendo secuencialmente v1.11 y v1.12, o localhost aislado con los dos árboles; preservar copia de configuración y probar histórico. No degradar la PWA pública para ensayar. No usar GitHub Actions.
